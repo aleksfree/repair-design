@@ -1,0 +1,31 @@
+@import 'normalize';
+
+@import 'vars';
+
+@import 'mixins';
+
+@import 'grid';
+
+@import 'fonts';
+
+/* Interface */
+
+@import 'interface';
+
+/* Header */
+
+@import 'sections/header';
+
+/* Hero */
+
+@import 'sections/hero';
+
+body {
+  font-family: sans-serif;
+  font-size: 14px; 
+}
+
+mark {
+  background: transparent;
+  color: $primary;
+}

@@ -1,0 +1,43 @@
+.header {
+  padding: 24px 0;
+  background: $dark;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $primary;
+}
+
+.nav {
+  &__item {
+    margin-right: 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $light;
+    &:hover {
+      color: $primary;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  } 
+}
+
+.phone {
+  font-weight: 500;
+  color: $primary;
+}
+
+.contacts {
+  &__phone {
+    margin-right: 45px;
+  }
+}

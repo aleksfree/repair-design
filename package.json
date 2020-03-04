@@ -1,0 +1,26 @@
+{
+  "name": "repair-design",
+  "version": "1.0.0",
+  "description": "Сайт компании по ремонту квартир",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleksfree/repair-design.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aleksfree/repair-design/issues"
+  },
+  "homepage": "https://github.com/aleksfree/repair-design#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2"
+  }
+}
