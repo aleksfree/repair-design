@@ -44,6 +44,7 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   /* 1 */
   height: 0;
@@ -229,6 +230,7 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   color: inherit;
@@ -263,6 +265,7 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -343,16 +346,33 @@ template {
   margin: 0 auto;
 }
 
+@font-face {
+  font-family: 'Futura Book';
+  src: url("../fonts/futura/FuturaBookC.woff2") format("woff2"), url("../fonts/futura/FuturaBookC.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: wrap;
+}
+
+@font-face {
+  font-family: 'Futura Demi';
+  src: url("../fonts/futura/FuturaDemiC.woff2") format("woff2"), url("../fonts/futura/FuturaDemiC.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: wrap;
+}
+
 /* Interface */
 .btn {
   display: inline-block;
   padding: 13px 20px;
+  font-family: 'Futura Demi';
   font-size: 13px;
-  font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
   background: #E3B873;
   color: #FFFFFF;
+  -webkit-box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
   box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
   border-radius: 2px;
   border: none;
@@ -366,14 +386,20 @@ template {
 }
 
 .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 .logo {
   font-size: 14px;
-  font-weight: 500;
+  font-family: 'Futura Demi';
   text-transform: uppercase;
   color: #E3B873;
 }
@@ -394,7 +420,7 @@ template {
 }
 
 .phone {
-  font-weight: 500;
+  font-family: 'Futura Demi';
   color: #E3B873;
 }
 
@@ -404,17 +430,11 @@ template {
 
 /* Hero */
 body {
-  font-family: sans-serif;
+  font-family: 'Futura Book', sans-serif;
   font-size: 14px;
 }
 
 mark {
   background: transparent;
   color: #E3B873;
-}
-
-.block {
-  -webkit-animation-name: Name;
-  animation-name: Name;
-  display: flex;
 }
