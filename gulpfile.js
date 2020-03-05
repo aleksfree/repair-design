@@ -1,8 +1,8 @@
 const syntax = 'scss';
 const {src, dest, watch} = require('gulp');
 const sass = require('gulp-sass');
-const cleanCss = require('gulp-clean-css');
 const rename = require('gulp-rename');
+const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
 
@@ -20,11 +20,14 @@ function sync() {
 
 function cssStyle() {
   return src('app/' + syntax + '/**/*.' + syntax)
-  .pipe(sass({outputStyle: 'expanded'}))
+  .pipe(sourcemaps.init())
+  .pipe(sass({outputStyle: 'compressed'}))
   .pipe(autoprefixer({
     overrideBrowserslist: ['last 2 versions'],
     cascade: false
   }))
+  .pipe(rename({suffix: '.min'}))
+  .pipe(sourcemaps.write('./'))
   .pipe(dest("app/css"))
   .pipe(browserSync.stream());
 };
