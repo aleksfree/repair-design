@@ -385,6 +385,10 @@ template {
   border: 1px solid #FFFFFF;
 }
 
+.btn_big {
+  padding: 17px 26px;
+}
+
 /* Header */
 .header {
   position: fixed;
@@ -513,7 +517,7 @@ template {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  max-width: 380px;
+  max-width: 405px;
 }
 
 .instagram__link {
