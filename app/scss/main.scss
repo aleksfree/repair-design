@@ -20,6 +20,10 @@
 
 @import 'sections/hero';
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Futura Book', sans-serif;
   font-size: 14px; 
@@ -28,4 +32,8 @@ body {
 mark {
   background: transparent;
   color: $primary;
+}
+
+.dark-section {
+  color: $light;
 }

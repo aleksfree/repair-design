@@ -11,4 +11,8 @@
   border-radius: 2px;
   border: none;
   cursor: pointer;
+  &_outline {
+    background: transparent;
+    border: 1px solid $light;
+  }
 }

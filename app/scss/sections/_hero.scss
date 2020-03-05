@@ -1,0 +1,68 @@
+.hero {
+  position: relative;
+  padding-top: 83px;
+  padding-left: 140px;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background: $dark url('../img/hero/bg-hero.jpg') no-repeat center;
+  background-size: cover;
+  &__instagram {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 100%;
+    background: $dark;
+  }
+  &__scroll-down {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 247px;
+    height: 97px;
+    background: $dark;
+    color: $light;
+    text-transform: uppercase;
+    text-decoration: none;
+    transform: translateY(50%);
+  }
+  &__text {
+    margin: 20px 0 40px;
+    font-size: 22px;
+    line-height: 1.36;
+  }
+  &__content {
+    max-width: 504px;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 380px;
+  }
+}
+
+.instagram {
+  &__link {
+    display: block;
+    font-family: 'Futura Demi';
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $primary;
+    transform: rotate(90deg);
+  }
+}
+
+.title {
+  margin: 0;
+  font-family: 'Yeseva One', cursive;
+  font-size: 40px;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
