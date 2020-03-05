@@ -81,6 +81,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
+  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   /* 2 */
 }
@@ -410,4 +411,10 @@ body {
 mark {
   background: transparent;
   color: #E3B873;
+}
+
+.block {
+  -webkit-animation-name: Name;
+  animation-name: Name;
+  display: flex;
 }
