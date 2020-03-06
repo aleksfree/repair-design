@@ -1,0 +1,48 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Futura Book', sans-serif;
+  font-size: 14px; 
+}
+
+mark {
+  background: transparent;
+  color: $primary;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+.dark-section {
+  color: $light;
+}
+
+.section-heading {
+  text-align: center;
+  &__title {
+    margin: 0 0 10px;
+    font-family: 'Yeseva One', cursive;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  &__img {
+    position: relative;
+    display: inline-block;
+    &::after, &::before {
+      @include pseudo;
+      width: 32px;
+      height: 2px;
+      top: 50%;
+      background: $primary;
+    }
+    &::after {
+      left: -42px;
+    }
+    &::before {
+      right: -42px;
+    }
+  }
+}

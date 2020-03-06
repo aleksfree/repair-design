@@ -8,6 +8,10 @@
 
 @import 'fonts';
 
+/* Settings */
+
+@import 'settings';
+
 /* Interface */
 
 @import 'interface';
@@ -20,20 +24,6 @@
 
 @import 'sections/hero';
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+/* Control */
 
-body {
-  font-family: 'Futura Book', sans-serif;
-  font-size: 14px; 
-}
-
-mark {
-  background: transparent;
-  color: $primary;
-}
-
-.dark-section {
-  color: $light;
-}
+@import 'sections/control';
