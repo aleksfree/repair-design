@@ -27,6 +27,7 @@
     text-transform: uppercase;
     text-decoration: none;
     color: $light;
+    transition: $time;
     &:hover {
       color: $primary;
     }
@@ -39,6 +40,9 @@
 .phone {
   font-family: 'Futura Demi';
   color: $primary;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .contacts {

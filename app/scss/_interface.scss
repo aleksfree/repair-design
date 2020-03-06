@@ -7,13 +7,21 @@
   text-decoration: none;
   background: $primary;
   color: $light;
-  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+  box-shadow: 0px 5px 15px rgba($primary, 0.2);
   border-radius: 2px;
   border: none;
   cursor: pointer;
+  transition: $time;
+  &:hover {
+    box-shadow: none;
+  }
   &_outline {
     background: transparent;
-    border: 1px solid $light;
+    border: 1px solid $light; 
+    box-shadow: none;
+    &:hover {
+      background: $dark;
+    }
   }
   &_big {
     padding: 17px 26px;
