@@ -13,15 +13,13 @@ function sync() {
           baseDir: "app"
       }
   });
-  watch('app/*.html').on('change', browserSync.reload);
-  watch('app/*.html').on('change', browserSync.reload);
-  watch('app/' + syntax + '/**/*.' + syntax, cssStyle);
+  watchFiles();
 };
 
 function cssStyle() {
   return src('app/' + syntax + '/**/*.' + syntax)
   .pipe(sourcemaps.init())
-  .pipe(sass({outputStyle: 'compressed'}))
+  .pipe(sass({outputStyle: 'expanded'}))
   .pipe(autoprefixer({
     overrideBrowserslist: ['last 2 versions'],
     cascade: false
@@ -31,5 +29,17 @@ function cssStyle() {
   .pipe(dest("app/css"))
   .pipe(browserSync.stream());
 };
+
+function watchFiles() {
+  watch('app/' + syntax + '/**/*.' + syntax, cssStyle);
+  watch('app/**/*.html', reloadBrowser);
+  watch('app/**/*.php', reloadBrowser);
+  watch('app/js/**/*.js', reloadBrowser);
+}
+
+function reloadBrowser(done) {
+  browserSync.reload();
+  done();
+}
 
 exports.default = sync;

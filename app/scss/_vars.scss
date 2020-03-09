@@ -3,3 +3,9 @@ $dark: #131313;
 $primary: #E3B873;
 $light: #FFFFFF;
 $time: 0.3s;
+$breakpoints: (
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px
+);

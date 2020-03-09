@@ -5,7 +5,11 @@
   width: 100%;
   z-index: 99;
   padding: 21px 0;
+  font-size: 14px;
   background: $dark;
+  @include media('xl') {
+    font-size: 12px;
+  }
 }
 
 .menu {
@@ -15,7 +19,6 @@
 }
 
 .logo {
-  font-size: 14px;
   font-family: 'Futura Demi';
   text-transform: uppercase;
   color: $primary;
@@ -23,7 +26,7 @@
 
 .nav {
   &__item {
-    margin-right: 40px;
+    margin-right: 37px;
     text-transform: uppercase;
     text-decoration: none;
     color: $light;
@@ -34,7 +37,13 @@
     &:last-child {
       margin-right: 0;
     }
-  } 
+    @include media('xl') {
+      margin-right: 25px;
+    }
+  }
+  @include media('md') {
+    display: none;
+  }
 }
 
 .phone {
@@ -48,5 +57,20 @@
 .contacts {
   &__phone {
     margin-right: 45px;
+    @include media('xl') {
+      margin-right: 20px;
+    }
+    @include media('lg') {
+      margin-right: 0;
+    }
+    @include media('md') {
+      text-decoration: none;
+      color: $light;
+    }
+  }
+  &__btn {
+    @include media('lg') {
+      display: none;
+    }
   }
 }

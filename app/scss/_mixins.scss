@@ -3,3 +3,15 @@
   display: $display;
   position: $pos;
 }
+
+@mixin media($width, $type: max) {
+  @if map_has_key($breakpoints, $width) {
+   $width: map_get($breakpoints, $width);
+   @if $type == max {
+    $width: $width - 1px;
+   }
+   @media screen and (#{$type}-width: $width) {
+    @content;
+   }
+  }
+}
