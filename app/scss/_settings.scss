@@ -29,10 +29,26 @@ img {
 }
 
 .section {
+  padding: 164px 0;
   &__heading {
     margin-bottom: 31px;
     @include media('sm') {
       margin-bottom: 40px;
+    }
+  }
+  &__subtitle {
+    margin: 0 auto 47px;
+    padding: 0 20px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.35;
+    color: $grey;
+    @include media('md') {
+      font-size: 18px;
+    }
+    @include media('sm') {
+      font-size: 15px;
+      margin-bottom: 36px;
     }
   }
 }
@@ -111,7 +127,7 @@ img {
   &__text {
     position: relative;
     width: 84%;
-    margin: -124px auto 0;
+    margin: -127px auto 0;
     padding: 25px 8% 53px;
     background: $light;
     box-shadow: 10px 10px 20px rgba($darken, 0.03);
@@ -166,6 +182,7 @@ img {
     text-transform: uppercase;
     color: $light;
     background: $primary;
+    box-shadow: 5px 5px 10px rgba($primary, 0.3);
     transform: translateY(50%);
     @include media('xl') {
       font-size: 16px;

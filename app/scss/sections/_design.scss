@@ -1,0 +1,34 @@
+.design {
+  &-card {
+    position: relative;
+    &::after {
+      @include pseudo;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba($dark, 0.3);
+    }
+  }
+  &__heading {
+    margin-bottom: 18px;
+    @include media('sm') {
+      color: $light;
+    }
+  }
+  &__subtitle {
+    max-width: 785px;
+    color: $grey;
+    @include media('sm') {
+      color: $light;
+    }
+  }
+  &__card {
+    @include media('md') {
+      margin-bottom: 75px;
+    }
+  }
+  @include media('sm') {
+    background: $dark;
+  }
+}
