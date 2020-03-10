@@ -37,9 +37,6 @@
     &:last-child {
       margin-right: 0;
     }
-    @include media('xxl', 'min') {
-      margin-right: 4vw;
-    }
   }
   @include media('md') {
     display: none;

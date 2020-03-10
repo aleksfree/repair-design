@@ -1,8 +1,6 @@
 .container {
+  position: relative;
   width: 90%;
-  max-width: 90%;
+  max-width: 1255px;
   margin: 0 auto;
-  @include media('xxl') {
-    max-width: 1255px;
-  }
 }
