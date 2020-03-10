@@ -1,8 +1,6 @@
 .hero {
   position: relative;
   padding-top: 83px;
-  display: flex;
-  align-items: center;
   height: 100vh;
   max-height: 768px;
   background: $dark url('../img/bg-hero.jpg') no-repeat center;
@@ -40,7 +38,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 87px;
+    width: 97px;
     height: 100%;
     background: $dark;
     @include media('lg') {
@@ -78,7 +76,7 @@
     }
   }
   &__text {
-    margin: 13px 0 45px;
+    margin: 18px 0 45px;
     font-size: 22px;
     line-height: 1.36;
     @include media('xl') {
@@ -86,16 +84,18 @@
     }
     @include media('sm') {
       max-width: 321px;
-      margin-bottom: 35px;
+      margin-top: 13px;
+      margin-bottom: 32px;
       font-size: 18px;
     }
   }
   &__content {
     position: relative;
     z-index: 1;
-    margin-left: 50px;
+    margin-left: 61px;
+    margin-top: 13.125vw;
     @include media('sm') {
-      margin: 0 auto;
+      margin: 58px auto 0;
     }
   }
   &__buttons {
@@ -108,7 +108,7 @@
     }
   }
   @include media('sm') {
-    height: 470px;
+    height: 535px;
   }
 }
 

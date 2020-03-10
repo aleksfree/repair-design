@@ -344,7 +344,7 @@ template {
 .container {
   position: relative;
   width: 90%;
-  max-width: 1255px;
+  max-width: 1256px;
   margin: 0 auto;
 }
 
@@ -399,12 +399,22 @@ img {
   color: #FFFFFF;
 }
 
+.section__heading {
+  margin-bottom: 31px;
+}
+
+@media screen and (max-width: 575px) {
+  .section__heading {
+    margin-bottom: 40px;
+  }
+}
+
 .section-heading {
   text-align: center;
 }
 
 .section-heading__title {
-  margin: 0 0 10px;
+  margin: 0 0 13px;
   font-family: 'Yeseva One', cursive;
   font-size: 20px;
   text-transform: uppercase;
@@ -446,25 +456,62 @@ img {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .row {
+    padding: 0;
+  }
 }
 
 .col {
-  -ms-flex-preferred-size: 32%;
-  flex-basis: 32%;
+  -ms-flex-preferred-size: 31.72%;
+  flex-basis: 31.72%;
+}
+
+@media screen and (max-width: 767px) {
+  .col {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .col {
+    width: 100%;
+  }
 }
 
 .card__img {
   position: relative;
   width: 100%;
-  height: 421px;
+  height: 29.24vw;
   overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+  .card__img {
+    height: 365px;
+  }
 }
 
 .card__img img {
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 421px;
+  height: 100%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   -o-object-fit: cover;
@@ -473,20 +520,46 @@ img {
 
 .card__text {
   position: relative;
-  width: 82%;
-  margin: 0 auto;
-  padding: 25px 31px 57px;
+  width: 84%;
+  margin: -124px auto 0;
+  padding: 25px 8% 53px;
   background: #FFFFFF;
   -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
-  -webkit-transform: translateY(-43%);
-  transform: translateY(-43%);
+}
+
+@media screen and (max-width: 1199px) {
+  .card__text {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .card__text {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .card__text {
+    width: 80%;
+    margin-top: -140px;
+    padding: 22px 8% 33px;
+    margin-left: 0;
+  }
 }
 
 .card__title {
   margin: 0 0 11px;
   font-size: 18px;
   color: #363636;
+}
+
+@media screen and (max-width: 1199px) {
+  .card__title {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -536,8 +609,16 @@ img {
   transform: translateY(50%);
 }
 
+@media screen and (max-width: 1199px) {
+  .card__label {
+    font-size: 16px;
+  }
+}
+
 @media screen and (max-width: 575px) {
   .card__label {
+    width: 71%;
+    height: 40px;
     font-size: 15px;
   }
 }
@@ -688,12 +769,6 @@ img {
 .hero {
   position: relative;
   padding-top: 83px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   height: 100vh;
   max-height: 768px;
   background: #131313 url("../img/bg-hero.jpg") no-repeat center;
@@ -748,7 +823,7 @@ img {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 87px;
+  width: 97px;
   height: 100%;
   background: #131313;
 }
@@ -804,7 +879,7 @@ img {
 }
 
 .hero__text {
-  margin: 13px 0 45px;
+  margin: 18px 0 45px;
   font-size: 22px;
   line-height: 1.36;
 }
@@ -818,7 +893,8 @@ img {
 @media screen and (max-width: 575px) {
   .hero__text {
     max-width: 321px;
-    margin-bottom: 35px;
+    margin-top: 13px;
+    margin-bottom: 32px;
     font-size: 18px;
   }
 }
@@ -826,12 +902,13 @@ img {
 .hero__content {
   position: relative;
   z-index: 1;
-  margin-left: 50px;
+  margin-left: 61px;
+  margin-top: 13.125vw;
 }
 
 @media screen and (max-width: 575px) {
   .hero__content {
-    margin: 0 auto;
+    margin: 58px auto 0;
   }
 }
 
@@ -857,7 +934,7 @@ img {
 
 @media screen and (max-width: 575px) {
   .hero {
-    height: 470px;
+    height: 535px;
   }
 }
 
@@ -908,6 +985,13 @@ img {
 /* Control */
 .control {
   background: #131313;
+}
+
+/* Types */
+@media screen and (max-width: 767px) {
+  .types__card {
+    margin-bottom: 75px;
+  }
 }
 
 /*# sourceMappingURL=main.min.css.map */
