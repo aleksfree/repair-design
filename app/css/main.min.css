@@ -343,8 +343,14 @@ template {
 
 .container {
   width: 90%;
-  max-width: 1255px;
+  max-width: 90%;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 1440px) {
+  .container {
+    max-width: 1255px;
+  }
 }
 
 @font-face {
@@ -466,6 +472,12 @@ h1, h2, h3, h4, h5, h6 {
   padding: 17px 26px;
 }
 
+@media screen and (max-width: 575px) {
+  .btn {
+    border-radius: 0;
+  }
+}
+
 /* Header */
 .header {
   position: fixed;
@@ -503,7 +515,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav__item {
-  margin-right: 37px;
+  margin-right: 2.57vw;
   text-transform: uppercase;
   text-decoration: none;
   color: #FFFFFF;
@@ -519,9 +531,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 0;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 1441px) {
   .nav__item {
-    margin-right: 25px;
+    margin-right: 4vw;
   }
 }
 
@@ -689,7 +701,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero__text {
-  margin: 15px 0 45px;
+  margin: 13px 0 45px;
   font-size: 22px;
   line-height: 1.36;
 }
@@ -737,6 +749,12 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .hero {
+    height: 470px;
   }
 }
 

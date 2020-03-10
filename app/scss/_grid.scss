@@ -1,5 +1,8 @@
 .container {
   width: 90%;
-  max-width: 1255px;
+  max-width: 90%;
   margin: 0 auto;
+  @include media('xxl') {
+    max-width: 1255px;
+  }
 }

@@ -26,4 +26,7 @@
   &_big {
     padding: 17px 26px;
   }
+  @include media('sm') {
+    border-radius: 0;
+  }
 }

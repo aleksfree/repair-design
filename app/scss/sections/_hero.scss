@@ -78,7 +78,7 @@
     }
   }
   &__text {
-    margin: 15px 0 45px;
+    margin: 13px 0 45px;
     font-size: 22px;
     line-height: 1.36;
     @include media('xl') {
@@ -106,6 +106,9 @@
       max-width: 340px;
       flex-direction: column;
     }
+  }
+  @include media('sm') {
+    height: 470px;
   }
 }
 
