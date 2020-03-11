@@ -26,6 +26,9 @@
   &_big {
     padding: 17px 26px;
   }
+  &_modal {
+    padding: 19px 47px 17px;
+  }
   @include media('sm') {
     border-radius: 0;
   }

@@ -1,0 +1,62 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba($dark, 0.6);
+  z-index: 100;
+  &_visible {
+    visibility: visible;
+  }
+  &__dialog {
+    position: relative;
+    width: 506px;
+    min-height: 509px;
+    padding: 33px 3.4vw 27px;
+    background: $dark url('../img/bg-modal.svg') no-repeat center;
+    background-size: cover;
+    @include media('sm') {
+      width: 90%;
+      padding-left: 5vw;
+      padding-right: 5vw;
+    }
+  }
+  &__close {
+    position: absolute;
+    top: 13px;
+    right: 14px;
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    background: transparent url('../img/close.svg') no-repeat center;
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+  }
+  &__title {
+    max-width: 365px;
+    margin: 0 auto 28px;
+    font-size: 19px;
+    line-height: 1.37;
+    text-align: center;
+    @include media('sm') {
+      font-size: 16px;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__btn {
+    align-self: flex-end;
+    margin-top: 36px;
+    @include media('sm') {
+      align-self: center;
+    }
+  }
+}
