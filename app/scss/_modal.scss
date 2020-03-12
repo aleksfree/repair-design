@@ -4,27 +4,21 @@
   left: 0;
   bottom: 0;
   right: 0;
-  visibility: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba($dark, 0.6);
-  z-index: 100;
+  width: 506px;
+  height: 509px;
+  display: none;
+  margin: auto;
+  padding: 33px 3.4vw 27px;
+  background: $dark url('../img/bg-modal.svg') no-repeat center;
+  background-size: cover;
+  z-index: 199;
   &_visible {
-    visibility: visible;
+    display: block;
   }
-  &__dialog {
-    position: relative;
-    width: 506px;
-    min-height: 509px;
-    padding: 33px 3.4vw 27px;
-    background: $dark url('../img/bg-modal.svg') no-repeat center;
-    background-size: cover;
-    @include media('sm') {
-      width: 90%;
-      padding-left: 5vw;
-      padding-right: 5vw;
-    }
+  @include media('sm') {
+    width: 90%;
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
   &__close {
     position: absolute;
@@ -58,5 +52,19 @@
     @include media('sm') {
       align-self: center;
     }
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+  background: rgba($dark, 0.5);
+  z-index: 100;
+  &_visible {
+    display: block;
   }
 }

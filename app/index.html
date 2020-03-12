@@ -22,7 +22,7 @@
         </nav>
         <div class="contacts menu__contacts">
           <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
-          <a href="#" class="btn btn_primary contacts__btn">Заказать звонок</a>
+          <a href="#" class="btn btn_primary contacts__btn" data-toggle="modal">Заказать звонок</a>
         </div>
       </div>
       <!-- /.menu -->
@@ -42,8 +42,8 @@
             и 20% от стоимости материалов за счет организации работы
           </p>
           <div class="hero__buttons">
-            <button class="btn hero-content__btn btn_big">Рассчитать стоимость</button>
-            <button class="btn hero-content__btn btn_big btn_outline">Отправить заявку</button>
+            <button class="btn hero-content__btn btn_big" data-toggle="modal">Рассчитать стоимость</button>
+            <button class="btn hero-content__btn btn_big btn_outline" data-toggle="modal">Отправить заявку</button>
           </div>
         </div>
          <!-- /.hero__content -->
@@ -266,29 +266,28 @@
     </section>
     <!-- /.design -->
   </main>
-  <div class="modal">
-    <div class="modal__dialog dark-section">
-      <button class="modal__close"></button>
-      <h4 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h4>
-      <form action="" method="post" class="form modal__form">
-        <label for="user-name" class="label label_light form__label">Имя</label>
-        <input type="text" id="user-name" class="input input_light form__input" placeholder="Как вас зовут:">
-        <label for="user-phone" class="label label_light form__label">Телефон</label>
-        <input type="text" id="user-phone" class="input input_light form__input" placeholder="Ваш номер телефона:">
-        <label for="user-email" class="label label_light form__label">Email</label>
-        <input type="text" id="user-email" class="input input_light form__input" placeholder="Ваш email">
-        <div class="policy form__policy">
-          <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox">
-          <label for="policy-checkbox" class="policy__label">
-            <span class="checkbox-icon"></span>
-            Я соглашаюсь с обработкой данных
-          </label>
-        </div>
-        <button type="submit" class="btn btn_modal modal__btn">Отправить заявку</button>
-      </form>
-    </div>
-    <!-- /.modal__dialog -->
+  <div class="overlay"></div>
+  <div class="modal dark-section">
+    <button class="modal__close"></button>
+    <h4 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h4>
+    <form action="" method="post" class="form modal__form">
+      <label for="user-name" class="label label_light form__label">Имя</label>
+      <input type="text" id="user-name" class="input input_light form__input" placeholder="Как вас зовут:">
+      <label for="user-phone" class="label label_light form__label">Телефон</label>
+      <input type="text" id="user-phone" class="input input_light form__input" placeholder="Ваш номер телефона:">
+      <label for="user-email" class="label label_light form__label">Email</label>
+      <input type="text" id="user-email" class="input input_light form__input" placeholder="Ваш email">
+      <div class="policy form__policy">
+        <input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox">
+        <label for="policy-checkbox" class="policy__label">
+          <span class="checkbox-icon"></span>
+          Я соглашаюсь с обработкой данных
+        </label>
+      </div>
+      <button type="submit" class="btn btn_modal modal__btn">Отправить заявку</button>
+    </form>
   </div>
   <!-- /.modal -->
+  <script src="js/main.js"></script>
 </body>
 </html>

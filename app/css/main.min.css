@@ -578,8 +578,8 @@ img {
 @media screen and (max-width: 575px) {
   .card__text {
     width: 80%;
-    margin-top: -140px;
-    padding: 22px 8% 33px;
+    margin-top: -141px;
+    padding: 21px 9% 35px;
     margin-left: 0;
   }
 }
@@ -588,6 +588,7 @@ img {
   margin: 0 0 11px;
   font-size: 18px;
   color: #363636;
+  white-space: nowrap;
 }
 
 @media screen and (max-width: 1199px) {
@@ -596,7 +597,7 @@ img {
   }
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 991px) {
   .card__title {
     font-size: 15px;
   }
@@ -1158,7 +1159,7 @@ img {
 /* Types */
 @media screen and (max-width: 767px) {
   .types__card {
-    margin-bottom: 75px;
+    margin-bottom: 74px;
   }
 }
 
@@ -1201,7 +1202,7 @@ img {
 
 @media screen and (max-width: 767px) {
   .design__card {
-    margin-bottom: 75px;
+    margin-bottom: 77px;
   }
 }
 
@@ -1218,35 +1219,22 @@ img {
   left: 0;
   bottom: 0;
   right: 0;
-  visibility: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background: rgba(19, 19, 19, 0.6);
-  z-index: 100;
-}
-
-.modal_visible {
-  visibility: visible;
-}
-
-.modal__dialog {
-  position: relative;
   width: 506px;
-  min-height: 509px;
+  height: 509px;
+  display: none;
+  margin: auto;
   padding: 33px 3.4vw 27px;
   background: #131313 url("../img/bg-modal.svg") no-repeat center;
   background-size: cover;
+  z-index: 199;
+}
+
+.modal_visible {
+  display: block;
 }
 
 @media screen and (max-width: 575px) {
-  .modal__dialog {
+  .modal {
     width: 90%;
     padding-left: 5vw;
     padding-right: 5vw;
@@ -1301,6 +1289,21 @@ img {
     -ms-flex-item-align: center;
     align-self: center;
   }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+  background: rgba(19, 19, 19, 0.5);
+  z-index: 100;
+}
+
+.overlay_visible {
+  display: block;
 }
 
 /*# sourceMappingURL=main.min.css.map */

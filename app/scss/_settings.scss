@@ -140,8 +140,8 @@ img {
     }
     @include media('sm') {
       width: 80%;
-      margin-top: -140px;
-      padding: 22px 8% 33px;
+      margin-top: -141px;
+      padding: 21px 9% 35px;
       margin-left: 0;
     }
   }
@@ -149,10 +149,11 @@ img {
     margin: 0 0 11px;
     font-size: 18px;
     color: $grey;
+    white-space: nowrap;
     @include media('xl') {
       font-size: 16px;
     }
-    @include media('sm') {
+    @include media('lg') {
       font-size: 15px;
     }
   }
