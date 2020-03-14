@@ -25,10 +25,12 @@ img {
 }
 
 .dark-section {
+  background-color: $dark;
   color: $light;
 }
 
 .section {
+  position: relative;
   padding: 164px 0;
   &__heading {
     margin-bottom: 31px;
@@ -80,29 +82,6 @@ img {
     &::before {
       right: -42px;
     }
-  }
-}
-
-.row {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 10px;
-  @include media('md') {
-    flex-direction: column;
-    align-items: center;
-  }
-  @include media('sm') {
-    padding: 0;
-  }
-}
-
-.col {
-  flex-basis: 31.72%;
-  @include media('md') {
-    width: 80%;
-  }
-  @include media('sm') {
-    width: 100%;
   }
 }
 
@@ -270,5 +249,67 @@ img {
     height: 100%;
     background: url('../img/check.svg') no-repeat center;
     background-size: 80%;
+  }
+}
+
+.heading-decorate {
+  &__title {
+    position: relative;
+    width: 100%;
+    max-width: 253px;
+    margin: 0 0 24px;
+    font-size: 27px;
+    line-height: 1.37;
+    letter-spacing: -0.07em;
+    text-transform: uppercase;
+    color: $primary;
+    @include media('lg') {
+      margin-right: auto;
+      margin-left: auto;
+      font-size: 24px;
+    }
+    @include media('sm') {
+      font-size: 22px;
+    }
+    &::after {
+      @include pseudo;
+      right: 0;
+      bottom:18px;
+      width: 92px;
+      height: 1px;
+      background: $primary;
+      @include media('lg') {
+        display: none;
+      }
+    } 
+  }
+  &__text {
+    max-width: 442px;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.61;
+    @include media('xl') {
+      width: 90%;
+    }
+    @include media('lg') {
+      max-width: 80%;
+      margin: 0 auto;
+    }
+    @include media('sm') {
+      font-size: 14px;
+    }
+  }
+  @include media('lg') {
+    text-align: center;
+  }
+}
+
+.swiper-slide {
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
   }
 }

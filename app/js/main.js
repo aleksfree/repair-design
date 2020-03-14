@@ -4,7 +4,7 @@ $(function() {
       overlay = $('.overlay'),
       modalBtn = $('[data-toggle=modal]'),
       closeBtn = $('.modal__close'),
-      top_show = 500,
+      top_show = 0,
       delay = 1000,
       data = [overlay, modalBtn, closeBtn];
 
@@ -44,6 +44,37 @@ $(function() {
         $('body, html').animate({
           scrollTop: 0
         }, delay);
+      });
+
+      /* Slider in projects */
+
+      var projectsSwiper = new Swiper ('.projects-slider', {
+        loop: true,
+
+        pagination: {
+          el: '.projects__slider-pagination',
+          clickable: true,
+        },
+
+        navigation: {
+          nextEl: '.projects__slider-button-next',
+          prevEl: '.projects__slider-button-prev',
+        },
+      });
+
+      var projectsSwiperRight = new Swiper('.projects-slider_right', {
+        loop: true,
+        effect: 'fade',
+
+        pagination: {
+          el: '.projects__slider-pagination',
+          clickable: true
+        },
+
+        navigation: {
+          nextEl: '.projects__slider-button-next',
+          prevEl: '.projects__slider-button-prev',
+        },
       });
   
 });

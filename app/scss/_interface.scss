@@ -38,6 +38,7 @@
   position: fixed;
   right: 20px;
   bottom: 20px;
+  z-index: 99;
   width: 50px;
   height: 50px;
   display: none;
@@ -47,5 +48,45 @@
   @include media('md') {
     width: 30px;
     height: 30px;
+  }
+}
+
+.slider {
+  &-nav {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    @include media('sm') {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &-button {
+    width: 41px;
+    height: 13px;
+    cursor: pointer;
+    &-prev {
+      margin-right: 29px;
+      background: url('../img/arrow-left.svg') no-repeat center;
+    }
+    &-next {
+      margin-left: 29px;
+      background: url('../img/arrow-right.svg') no-repeat center;
+    }
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: rgba($light, 0.3);
+  cursor: pointer;
+  margin-right: 18px;
+  &:last-child {
+    margin-right: 0;
+  }
+  &-active {
+    background: $light;
   }
 }
