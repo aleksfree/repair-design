@@ -24,6 +24,12 @@ img {
   width: 100%;
 }
 
+a, button {
+  &:focus {
+    outline: none;
+  }
+}
+
 .dark-section {
   background-color: $dark;
   color: $light;
@@ -253,11 +259,18 @@ img {
 }
 
 .heading-decorate {
+  &__suptitle {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 15px;
+    font-family: 'Futura Demi';
+    text-transform: uppercase;
+  }
   &__title {
     position: relative;
     width: 100%;
     max-width: 253px;
-    margin: 0 0 24px;
+    margin: 0;
     font-size: 27px;
     line-height: 1.37;
     letter-spacing: -0.07em;
@@ -285,7 +298,7 @@ img {
   }
   &__text {
     max-width: 442px;
-    margin: 0;
+    margin: 24px 0 0;
     font-size: 18px;
     line-height: 1.61;
     @include media('xl') {
@@ -293,7 +306,7 @@ img {
     }
     @include media('lg') {
       max-width: 80%;
-      margin: 0 auto;
+      margin: 24px auto 0;
     }
     @include media('sm') {
       font-size: 14px;
@@ -302,11 +315,18 @@ img {
   @include media('lg') {
     text-align: center;
   }
+  &-title {
+    &_narrow {
+      max-width: 305px;
+      letter-spacing: 0;
+    }
+  }
 }
 
 .swiper-slide {
   img {
     position: absolute;
+    height: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);

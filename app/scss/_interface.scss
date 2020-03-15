@@ -74,6 +74,39 @@
       margin-left: 29px;
       background: url('../img/arrow-right.svg') no-repeat center;
     }
+    &:focus {
+      outline: none;
+    }
+  }
+  &-chapters {
+    &-text {
+      width: 100%;
+      max-width: 136px;
+      opacity: 0.3;
+      cursor: pointer;
+      &_active {
+        opacity: 1;
+      }
+      &__number {
+        margin-bottom: 12px;
+        display: inline-block;
+        font-family: 'Yeseva One';
+        font-size: 15px;
+        text-transform: uppercase;
+        border-bottom: 1px solid $primary;
+      }
+      &:last-child {
+        max-width: 100px;
+      }
+    }
+    &__text {
+      margin-bottom: 43px;
+    }
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
   }
 }
 
@@ -88,5 +121,8 @@
   }
   &-active {
     background: $light;
+  }
+  &:focus {
+    outline: none;
   }
 }

@@ -1,0 +1,45 @@
+.steps {
+  &-slider {
+    &_right {
+      height: 26.5vw;
+    }
+    &__title {
+      max-width: 260px;
+      margin: 0 0 8px;
+      font-size: 15px;
+      text-transform: uppercase;
+      line-height: 1.53;
+      color: $primary;
+    }
+    &__descr {
+      max-width: 325px;
+      p {
+        margin-top: 0;
+        margin-bottom: 11px;
+        line-height: 1.67;
+      }
+    }
+  }
+  &__counter {
+    margin-bottom: 20px;
+    font-family: 'Yeseva One', cursive;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  &__heading-decorate {
+    margin-bottom: 87px;
+  }
+  &__left {
+    width: 35%;
+  }
+  &__right {
+    padding-top: 90px;
+    width: 62%;
+  }
+  &__slider-nav {
+    margin-top: 65px;
+  }
+  @include media('xl') {
+    display: none;
+  }
+}
