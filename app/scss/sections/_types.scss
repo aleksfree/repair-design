@@ -1,4 +1,8 @@
 .types {
+  padding: 145px 0 124px;
+  @include media('sm') {
+    padding: 83px 0 208px;
+  }
   &__card {
     @include media('md') {
       margin-bottom: 74px;

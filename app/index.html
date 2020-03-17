@@ -12,10 +12,10 @@
   <header class="header">
     <div class="container">
       <div class="menu">
-        <div class="logo menu__logo">Repair Design Project</div>
+        <div class="logo menu__logo wow fadeInLeft">Repair Design Project</div>
         <nav class="nav menu__nav">
           <a href="#" class="nav__item">Главная</a>
-          <a href="#" class="nav__item">Проекты</a>
+          <a href="#projects" class="nav__item">Проекты</a>
           <a href="#" class="nav__item">Замер</a>
           <a href="#" class="nav__item">Команда</a>
           <a href="#" class="nav__item">Отзывы</a>
@@ -43,16 +43,16 @@
             и 20% от стоимости материалов за счет организации работы
           </p>
           <div class="hero__buttons">
-            <button class="btn hero-content__btn btn_big" data-toggle="modal">Рассчитать стоимость</button>
-            <button class="btn hero-content__btn btn_big btn_outline" data-toggle="modal">Отправить заявку</button>
+            <button class="btn hero-content__btn btn_big wow fadeInUp" data-toggle="modal" data-wow-delay="0.5s">Рассчитать стоимость</button>
+            <button class="btn hero-content__btn btn_big btn_outline wow fadeInUp" data-toggle="modal" data-wow-delay="1s">Отправить заявку</button>
           </div>
         </div>
          <!-- /.hero__content -->
       </div>
       <!-- /.container -->
-      <a href="#" class="hero__scroll-down">Листайте вниз</a>
+      <a href="#projects" class="hero__scroll-down wow bounce" data-wow-delay="4s" data-wow-iteration="2">Листайте вниз</a>
     </section>
-    <section class="section dark-section projects">
+    <section id="projects" class="section dark-section projects">
       <div class="container">
         <div class="row">
           <div class="projects__left">
@@ -194,13 +194,42 @@
     <!-- /.hero -->
     <section class="section control">
       <div class="container">
-        <div class="section-heading section__heading">
+        <div class="section-heading section-heading_light section__heading control__section-heading">
           <h2 class="section-heading__title">Онлайн контроль</h2>
           <div class="section-heading__img">
             <img src="../img/camera.svg" alt="Онлайн контроль">
           </div>
         </div>
          <!-- /.section-heading -->
+         <div class="video control__video">
+          <img src="img/play.svg" alt="Play" class="video__play">
+         </div>
+         <!-- /.control__video -->
+         <p class="control__text wow fadeInUp">
+          На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. 
+          В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. 
+          Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы 
+          получить ссылку на трансляцию.
+         </p>
+         <!-- /.control__text -->
+         <form action="" class="form control__form">
+           <div class="form__item">
+             <label for="control-name" class="label control__label">Имя</label>
+             <input type="text" id="control-name" class="input control__input" placeholder="Как вас зовут:">
+           </div>
+          <div class="form__item">
+            <label for="control-phone" class="label control__label">Телефон</label>
+            <input type="text" id="control-phone" class="input control__input" placeholder="Ваш номер телефона:">
+          </div>
+          <div class="policy control__policy">
+            <input type="checkbox" name="control-checkbox" id="control-checkbox" class="policy__checkbox">
+            <label for="control-checkbox" class="policy__label">
+              <span class="checkbox-icon"></span>
+              Я соглашаюсь с обработкой данных
+            </label>
+          </div>
+          <button type="submit" class="btn control__btn">Отправить</button>
+         </form>
       </div>
       <!-- /.container -->
     </section>
@@ -217,11 +246,11 @@
          <div class="row">
            <div class="col-30">
              <div class="card types__card">
-               <div class="card__img">
+               <div class="card__img wow zoomIn">
                  <img src="img/types-img-1.jpg" alt="Косметический ремонт">
                </div>
                <!-- /.card__img -->
-               <div class="card__text">
+               <div class="card__text wow fadeInUp">
                  <h3 class="card__title">Косметический ремонт</h3>
                  <!-- /.card__title -->
                  <ul class="card__list">
@@ -244,11 +273,11 @@
             <!-- /.col-30 -->
             <div class="col-30">
               <div class="card types__card">
-                <div class="card__img">
+                <div class="card__img wow zoomIn" data-wow-delay="0.5s">
                   <img src="img/types-img-2.jpg" alt="Капитальный ремонт">
                 </div>
                 <!-- /.card__img -->
-                <div class="card__text">
+                <div class="card__text wow fadeInUp" data-wow-delay="0.5s">
                   <h3 class="card__title">Капитальный ремонт</h3>
                   <!-- /.card__title -->
                   <ul class="card__list">
@@ -271,11 +300,11 @@
             <!-- /.col-30 -->
             <div class="col-30">
               <div class="card types__card">
-                <div class="card__img">
+                <div class="card__img wow zoomIn" data-wow-delay="1s">
                   <img src="img/types-img-3.jpg" alt="Дизайнерский ремонт">
                 </div>
                 <!-- /.card__img -->
-                <div class="card__text">
+                <div class="card__text wow fadeInUp" data-wow-delay="1s">
                   <h3 class="card__title">Дизайнерский ремонт</h3>
                   <!-- /.card__title -->
                   <ul class="card__list">
@@ -318,11 +347,11 @@
          <div class="row">
            <div class="col-30">
              <div class="card design__card">
-               <div class="card__img design-card">
+               <div class="card__img design-card wow zoomIn">
                  <img src="img/types-img-1.jpg" alt="Минимальный">
                </div>
                <!-- /.card__img -->
-               <div class="card__text">
+               <div class="card__text wow fadeInUp">
                  <h3 class="card__title">Минимальный</h3>
                  <!-- /.card__title -->
                  <ul class="card__list">
@@ -342,11 +371,11 @@
             <!-- /.col-30 -->
             <div class="col-30">
               <div class="card design__card">
-                <div class="card__img design-card">
+                <div class="card__img design-card wow zoomIn" data-wow-delay="0.5s">
                   <img src="img/types-img-3.jpg" alt="Капитальный ремонт">
                 </div>
                 <!-- /.card__img -->
-                <div class="card__text">
+                <div class="card__text wow fadeInUp" data-wow-delay="0.5s">
                   <h3 class="card__title">Стандартный</h3>
                   <!-- /.card__title -->
                   <ul class="card__list">
@@ -369,11 +398,11 @@
             <!-- /.col-30 -->
             <div class="col-30">
               <div class="card design__card">
-                <div class="card__img design-card">
+                <div class="card__img design-card wow zoomIn" data-wow-delay="0.5s">
                   <img src="img/types-img-2.jpg" alt="Полный">
                 </div>
                 <!-- /.card__img -->
-                <div class="card__text">
+                <div class="card__text wow fadeInUp" data-wow-delay="1s">
                   <h3 class="card__title">Полный</h3>
                   <!-- /.card__title -->
                   <ul class="card__list">
@@ -565,7 +594,7 @@
     <!-- /.steps -->
   </main>
   <div class="overlay"></div>
-  <div class="modal dark-section">
+  <div class="modal animated dark-section">
     <button class="modal__close"></button>
     <h4 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h4>
     <form action="" method="post" class="form modal__form">
@@ -590,6 +619,7 @@
   <!-- /.modal -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="js/wow.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

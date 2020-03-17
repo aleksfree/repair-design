@@ -37,7 +37,6 @@ a, button {
 
 .section {
   position: relative;
-  padding: 164px 0;
   &__heading {
     margin-bottom: 31px;
     @include media('sm') {
@@ -63,12 +62,16 @@ a, button {
 
 .section-heading {
   text-align: center;
+  &_light {
+    color: $light;
+  }
   &__title {
     margin: 0 0 13px;
     font-family: 'Yeseva One', cursive;
     font-size: 20px;
     text-transform: uppercase;
     @include media('sm') {
+      margin-bottom: 18px;
       font-size: 22px;
     }
   }
@@ -182,6 +185,14 @@ a, button {
 }
 
 .form {
+  &__item {
+    @include media('md') {
+      margin-top: 61px;
+    }
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
   &__input {
     padding: 6px 0;
     margin-bottom: 46px;
@@ -234,6 +245,7 @@ a, button {
     font-size: 16px;
     display: inline-flex;
     justify-content: flex-start;
+    align-items: center;
     cursor: pointer;
   }
 }

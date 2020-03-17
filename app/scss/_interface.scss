@@ -1,4 +1,5 @@
 .btn {
+  position: relative;
   display: inline-block;
   padding: 12px 20px 11px;
   font-family: 'Futura Demi';
@@ -20,6 +21,7 @@
     border: 1px solid $light; 
     box-shadow: none;
     &:hover {
+      text-shadow: 0 0 15px $light;
       background: $dark;
     }
   }
@@ -28,6 +30,31 @@
   }
   &_modal {
     padding: 19px 47px 17px;
+  }
+  &_flare {
+    overflow: hidden;
+    &::before,
+    &::after {
+      @include pseudo;
+      top: 0;
+      left: -200px;
+      width: 60px;
+      height: 100%;
+      background: $light;
+      filter: blur(40px);
+      transform: skewX(-30deg);
+    }
+    &:hover::before, &:focus::before {
+      left: calc(100% + 150px);
+      transition: 1s;
+    }
+    &:hover::after, &:focus::after {
+      left: calc(100% + 150px);
+      transition: 1s 0.5s;
+    }
+    &:hover {
+      filter: brightness(1.25);
+    }
   }
   @include media('sm') {
     border-radius: 0;

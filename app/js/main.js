@@ -46,6 +46,14 @@ $(function() {
         }, delay);
       });
 
+      /* Scroll down btn */
+
+      $("a[href^='#']").click(function(e) {
+        e.preventDefault();
+        var _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, delay / 2);
+      });
+
       /* Slider in projects */
 
       var projectsSwiper = new Swiper ('.projects-slider', {
@@ -166,4 +174,8 @@ $(function() {
         },
 
       });
+
+      /* Wow init */
+
+      new WOW().init();
 });

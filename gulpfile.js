@@ -19,7 +19,7 @@ function sync() {
 function cssStyle() {
   return src('app/' + syntax + '/**/*.' + syntax)
   .pipe(sourcemaps.init())
-  .pipe(sass({outputStyle: 'expanded'}))
+  .pipe(sass({outputStyle: 'compressed'}))
   .pipe(autoprefixer({
     overrideBrowserslist: ['last 2 versions'],
     cascade: false

@@ -2,6 +2,17 @@
   padding: 173px 0 407px;
   background: url('../img/bg-projects.svg') repeat-x bottom left,
               $dark url('../img/bg-section.svg') no-repeat center;
+  @include media('lg') {
+    padding-top: 270px;
+  }
+  @include media('md') {
+    padding-bottom: 250px;
+  }
+  @include media('sm') {
+    background-image: none;
+    padding-top: 246px;
+    padding-bottom: 30px;
+  }
   &-slider {
     width: 80%;
     margin: 0;
@@ -86,16 +97,5 @@
     @include media('md') {
       margin-top: 2.4vw;
     }
-  }
-  @include media('lg') {
-    padding-top: 290px;
-  }
-  @include media('lg') {
-    padding-bottom: 250px;
-  }
-  @include media('sm') {
-    background-image: none;
-    padding-top: 246px;
-    padding-bottom: 30px;
   }
 }
