@@ -46,6 +46,9 @@
   &__form {
     display: flex;
     flex-direction: column;
+    &-item {
+      margin-bottom: 46px;
+    }
   }
   &__btn {
     align-self: flex-end;

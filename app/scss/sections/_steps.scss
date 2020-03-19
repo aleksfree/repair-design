@@ -1,4 +1,6 @@
 .steps {
+  padding: 426px 0 502px;
+  background: $dark url('../img/bg-steps.svg') no-repeat center / cover;
   &-slider {
     &_right {
       height: 26.5vw;

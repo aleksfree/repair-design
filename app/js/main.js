@@ -178,4 +178,122 @@ $(function() {
       /* Wow init */
 
       new WOW().init();
+
+      /* Validation form */
+
+      $('#modal-form').validate({
+        errorClass: 'invalid',
+        errorElement: 'div',
+        errorPlacement: function(error, element) {
+          error.prependTo(element.parent());
+        },      
+        rules: {
+          name: {
+            required: true,
+            minlength: 2,
+            maxlength: 15
+          },
+          phone: 'required',
+          email: {
+            required: true,
+            email: true
+          },
+          policy: {
+            required: true
+          }
+        },
+        messages: {
+          name: {
+            required: 'Это обязательное поле',
+            minlength: 'Минимальная длина 2 символа',
+            maxlength: 'Максимальная длина 15 символов'
+          },
+          phone: {
+            required: "Это обязательное поле",
+          },
+          email: {
+            required: 'Это обязательное поле',
+            email: 'Некорректный email'
+          },
+          policy: {
+            required: 'Дайте согласие на обработку данных'
+          }
+        }       
+      });
+
+      $('#footer-form').validate({
+        errorClass: 'invalid',
+        errorElement: 'div',
+        errorPlacement: function(error, element) {
+          error.prependTo(element.parent());
+        },
+        rules: {
+          name: {
+            required: true,
+            minlength: 2,
+            maxlength: 15
+          },
+          phone: 'required',
+          quest: {
+            required: true,
+            minlength: 2,
+          },
+          policy: {
+            required: true
+          }
+        },
+        messages: {
+          name: {
+            required: 'Это обязательное поле',
+            minlength: 'Минимальная длина 2 символа',
+            maxlength: 'Максимальная длина 15 символов'
+          },
+          phone: {
+            required: "Это обязательное поле",
+          },
+          quest: {
+            required: 'Это обязательное поле',
+            minlength: 'Минимальная длина 2 символа',
+          },
+          policy: {
+            required: 'Дайте согласие на обработку данных'
+          }
+        }       
+      });
+
+      $('#control-form').validate({
+        errorClass: 'invalid',
+        errorElement: 'div',
+        errorPlacement: function(error, element) {
+          error.prependTo(element.parent());
+        },
+        rules: {
+          name: {
+            required: true,
+            minlength: 2,
+            maxlength: 15
+          },
+          phone: 'required',
+          policy: {
+            required: true
+          }
+        },
+        messages: {
+          name: {
+            required: 'Это обязательное поле',
+            minlength: 'Минимальная длина 2 символа',
+            maxlength: 'Максимальная длина 15 символов'
+          },
+          phone: {
+            required: "Это обязательное поле",
+          },
+          policy: {
+            required: 'Дайте согласие на обработку данных'
+          }
+        }       
+      });
+
+      /* Mask */
+
+      $('.mask-tel').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
 });

@@ -1,0 +1,130 @@
+.team {
+  position: relative;
+  padding: 0 0 320px;
+  @include media('xl') {
+    background: $dark;
+  }
+  @include media('md') {
+    padding-top: 50px;
+    padding-bottom: 160px;
+  }
+  @include media('sm') {
+    padding: 19px 0 0;
+  }
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1028px;
+    @include media('lg') {
+      flex-direction: column;
+      align-items: center;
+    }
+    @include media('sm') {
+      align-items: flex-end;
+    }
+    &__icon {
+      position: absolute;
+      top: -51px;
+      left: -54px;
+      width: 110px;
+      height: 110px;
+      @include media('sm') {
+        top: -71px;
+      }
+    }
+    &__item {
+      position: relative;
+      width: 26.46%;
+      @include media('xl') {
+        width: 29%;
+      }
+      @include media('lg') {
+        width: 50%;
+        margin-bottom: 112px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      @include media('md') {
+        width: 70%;
+      }
+      @include media('sm') {
+        width: 81.1vw;
+      }
+    }
+    &__text {
+      position: relative;
+      z-index: 2;
+      padding: 22px 0 0;
+      width: 85%;
+      margin: -85px auto 0;
+      text-align: center;
+      background: $light;
+      box-shadow: 0px 10px 15px rgba($darken, 0.05);
+      @include media('sm') {
+        width: 77%;
+        margin: -82px auto 0;
+      }
+    }
+    &__title {
+      margin: 0 0 7px;
+      font-size: 18px;
+    }
+    &__descr {
+      margin: 0 0 24px;
+      font-size: 18px;
+      color: $secondary;
+    }
+    &__exp {
+      padding: 14px 0;
+      font-family: 'Yeseva One', cursive;
+      font-size: 13px;
+      text-transform: uppercase;
+      background: $primary;
+      color: $light;
+    }
+  }
+  &__list {
+    margin: 0 auto;
+  }
+  &__heading {
+    margin-top: -406px;
+    margin-bottom: 16px;
+    color: $light;
+    @include media('xl') {
+      margin-top: 0;
+    }
+    @include media('sm') {
+      margin-bottom: 11px;
+    }
+  }
+  &__subtitle {
+    max-width: 490px;
+    margin-bottom: 82px;
+    color: $light;
+    @include media('sm') {
+      padding: 0;
+    }
+  }
+  &__text {
+    max-width: 568px;
+    margin: 51px auto;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.7;
+    @include media('xl') {
+      color: $light;
+    }
+    @include media('lg') {
+      display: none;
+    }
+    &::before {
+      @include pseudo(block, static);
+      margin: 0 auto 9px;
+      width: 55px;
+      height: 2px;
+      width: 55px;
+      background: $primary;
+    }
+  }
+}

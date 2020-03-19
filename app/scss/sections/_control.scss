@@ -8,7 +8,7 @@
     padding-top: 20px;
   }
   &__section-heading {
-    margin-top: -325px;
+    margin-top: -323px;
     @include media('lg') {
       margin-top: -260px;
     }
@@ -30,7 +30,7 @@
       color: $light;
     }
     @include media('sm') {
-      margin: 28px auto;
+      margin: 25px auto 28px;
       font-size: 14px;
     }
     &::before {
@@ -50,6 +50,16 @@
     flex-wrap: wrap;
     max-width: 769px;
     margin: 0 auto;
+    &-item {
+      width: 231px;
+      @include media('md') {
+        width: 100%;
+        margin-top: 61px;
+      }
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
     @include media('md') {
       flex-direction: column;
       max-width: 576px;
@@ -65,10 +75,8 @@
  
   &__input {
     padding: 2px 0 6px;
-    width: 231px;
     font-family: 'Futura Book';
     @include media('md') {
-      width: 100%;
       color: $light;
       border-bottom-color: $grey;
       @include input-placeholder {

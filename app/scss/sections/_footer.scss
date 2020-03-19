@@ -1,0 +1,164 @@
+.footer {
+  position: relative;
+  padding-top: 273px;
+  background: $dark url('../img/bg-footer.jpg') no-repeat center / cover;
+  @include media('md') {
+    padding: 76px 0 0;
+  }
+  @include media('sm') {
+    padding-bottom: 46px;
+    background-image: none;
+  }
+  &-wrap {
+    width: 61.32vw;
+    padding: 34px;
+    background: $black;
+    box-shadow: 0px 4px 4px rgba($darken, 0.25), 0px 4px 4px rgba($darken, 0.25);
+    @include media('lg') {
+      width: 80vw;
+    }
+    @include media('sm') {
+      padding: 0;
+      width: 100%;
+      background: $dark;
+      box-shadow: none;
+    }
+  }
+  &__wrap {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include media('md') {
+      position: static;
+      margin: 0 auto 52px;
+      transform: none;
+    }
+    @include media('sm') {
+      margin: 0;
+    }
+  }
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 516px;
+    margin: 0 auto;
+    &-item {
+      flex-basis: 44%;
+      margin-bottom: 48px;
+      @include media('md') {
+        flex-basis: 100%;
+      }
+      @include media('sm') {
+        margin-bottom: 62px;
+      }
+      &_full {
+        flex-basis: 100%;
+        @include media('sm') {
+          margin-bottom: 22px;
+        }
+      }
+    }
+  }
+  &__policy {
+    width: 100%;
+    text-align: center;
+    @include media('sm') {
+      text-align: left;
+    }
+  }
+  &__title {
+    font-size: 20px;
+    margin: 0 0 48px;
+    text-transform: uppercase;
+    text-align: center;
+    @include media('sm') {
+      margin-bottom: 52px;
+    }
+  }
+  &__input {
+    font-family: 'Futura Book', sans-serif;
+    @include media('md') {
+      border-bottom-color: rgba($light, 0.5);
+    }
+  }
+  &__label {
+    margin-bottom: -5px;
+  }
+  &__btn {
+    display: block;
+    margin: 46px auto 0;
+    padding: 16px 60px 17px;
+    font-size: 15px;
+    border-radius: 0;
+    @include media('sm') {
+      width: 100%;
+      margin-top: 64px;
+    }
+  }
+  &__location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include media('sm') {
+      flex-direction: column-reverse;
+    }
+  }
+  &__address {
+    margin-bottom: 22px;
+    max-width: 550px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: $primary;
+    text-align: center;
+    line-height: 1.4;
+    font-family: 'Yeseva One', cursive;
+    @include media('sm') {
+      font-size: 18px;
+    }
+  }
+  &__social {
+    a {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      margin-right: 13px;
+      @include media('sm') {
+        width: 39px;
+        height: 39px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    @include media('sm') {
+      order: -1;
+    }
+  }
+  &__map {
+    width: 64.24vw;
+    height: 32.29vw;
+    margin: 40px 0 65px;
+    background: url('../img/map.jpg') no-repeat center / cover;
+    @include media('lg') {
+      width: 80vw;
+      height: 40vw;
+    }
+    @include media('sm') {
+      margin: 47px 0 39px;
+      width: 90.67vw;
+      height: 68vw;
+    }
+  }
+  &__menu {
+    padding: 48px 0;
+    font-size: 14px;
+    @include media('xl') {
+      font-size: 12px;
+    }
+    @include media('sm') {
+      display: none;
+    }
+  }
+}
