@@ -52,6 +52,8 @@
 }
 
 .contacts {
+  display: flex;
+  align-items: center;
   &__phone {
     margin-right: 45px;
     @include media('xl') {

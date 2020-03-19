@@ -1,5 +1,4 @@
 .btn {
-  position: relative;
   display: inline-block;
   padding: 12px 20px 11px;
   font-family: 'Futura Demi';
@@ -32,7 +31,9 @@
     padding: 19px 47px 17px;
   }
   &_flare {
+    position: relative;
     overflow: hidden;
+    animation: Brightness 4s linear 1s infinite;
     &::before,
     &::after {
       @include pseudo;
@@ -44,20 +45,39 @@
       filter: blur(40px);
       transform: skewX(-30deg);
     }
-    &:hover::before, &:focus::before {
-      left: calc(100% + 150px);
-      transition: 1s;
+    &::after {
+      animation: Flare 4s linear infinite;
     }
-    &:hover::after, &:focus::after {
-      left: calc(100% + 150px);
-      transition: 1s 0.5s;
-    }
-    &:hover {
-      filter: brightness(1.25);
+    &::before {
+      animation: Flare 4s linear 0.5s infinite;
     }
   }
   @include media('sm') {
     border-radius: 0;
+  }
+}
+
+@keyframes Flare {
+  from {
+    left: -150px;
+  }
+  75% {
+    left: -150px;
+  }
+  to {
+    left: calc(100% + 150px);
+  }
+}
+
+@keyframes Brightness {
+  50% {
+    filter: none;
+  }
+  75% {
+    filter: brightness(1.25);
+  }
+  to {
+    filter: none;
   }
 }
 

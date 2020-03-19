@@ -179,7 +179,7 @@ $(function() {
 
       new WOW().init();
 
-      /* Validation form */
+      /* Validation forms */
 
       $('#modal-form').validate({
         errorClass: 'invalid',
@@ -295,5 +295,28 @@ $(function() {
 
       /* Mask */
 
-      $('.mask-tel').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+      $('.mask-tel').mask('+7 (000) 000-00-00', {placeholder: '+7 (___) ___-__-__'});
+
+      /* Yandex Map */
+
+      ymaps.ready(init);
+      function init(){
+          var myMap = new ymaps.Map('map', {
+              center: [47.24472357536472,39.72318282705297],
+              zoom: 18
+          });
+
+          myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'Собственный значок метки',
+            balloonContent: 'Это красивая метка'
+          }, {
+              iconLayout: 'default#image',
+              iconImageHref: 'img/location.png',
+              iconImageSize: [32, 32],
+              iconImageOffset: [-5, -38]
+          });
+
+          myMap.geoObjects.add(myPlacemark);
+          myMap.behaviors.disable('scrollZoom');
+      }
 });

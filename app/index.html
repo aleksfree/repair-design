@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/main.min.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=d8885b28-6dbd-4f4c-9449-d571f05834e6&lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
   <header class="header">
@@ -23,7 +24,7 @@
         </nav>
         <div class="contacts menu__contacts">
           <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
-          <a href="#" class="btn btn_primary contacts__btn" data-toggle="modal">Заказать звонок</a>
+          <a href="#" class="btn btn_flare contacts__btn" data-toggle="modal">Заказать звонок</a>
         </div>
       </div>
       <!-- /.menu -->
@@ -689,7 +690,7 @@
             <img src="img/icon-instagram.svg" alt="Instagram">
           </a>
         </div>
-        <div class="map footer__map"></div>
+        <div id="map" class="map footer__map"></div>
       </div>
     </div>
     <!-- /.container -->
@@ -707,7 +708,7 @@
           </nav>
           <div class="contacts menu__contacts">
             <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
-            <a href="#" class="btn btn_primary contacts__btn" data-toggle="modal">Заказать звонок</a>
+            <a href="#" class="btn btn_flare btn_primary contacts__btn" data-toggle="modal">Заказать звонок</a>
           </div>
         </div>
         <!-- /.menu -->
