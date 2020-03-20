@@ -1,7 +1,11 @@
 <?php
 
-  $name = $_POST['name'] ?? '';
-  $phone = $_POST['phone'] ?? '';
+  if(!isset($_POST['name']) and !isset($_POST['phone']) ) {
+    header('Location: /');
+    exit;
+  }
+  $name = $_POST['name'];
+  $phone = $_POST['phone'];
   $email = $_POST['email'] ?? 'Не указан';
   $quest = $_POST['quest'] ?? 'Не указан';
 
