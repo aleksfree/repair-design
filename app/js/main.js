@@ -193,7 +193,10 @@ $(function() {
             minlength: 2,
             maxlength: 15
           },
-          phone: 'required',
+          phone: {
+            required: true,
+            minlength: 18
+          },
           email: {
             required: true,
             email: true
@@ -209,7 +212,8 @@ $(function() {
             maxlength: 'Максимальная длина 15 символов'
           },
           phone: {
-            required: "Это обязательное поле",
+            required: 'Это обязательное поле',
+            minlength: 'Введите номер плностью'
           },
           email: {
             required: 'Это обязательное поле',
@@ -233,7 +237,10 @@ $(function() {
             minlength: 2,
             maxlength: 15
           },
-          phone: 'required',
+          phone: {
+            required: true,
+            minlength: 18
+          },
           quest: {
             required: true,
             minlength: 2,
@@ -249,7 +256,8 @@ $(function() {
             maxlength: 'Максимальная длина 15 символов'
           },
           phone: {
-            required: "Это обязательное поле",
+            required: 'Это обязательное поле',
+            minlength: 'Введите номер плностью'
           },
           quest: {
             required: 'Это обязательное поле',
@@ -273,7 +281,10 @@ $(function() {
             minlength: 2,
             maxlength: 15
           },
-          phone: 'required',
+          phone: {
+            required: true,
+            minlength: 18
+          },
           policy: {
             required: true
           }
@@ -285,7 +296,8 @@ $(function() {
             maxlength: 'Максимальная длина 15 символов'
           },
           phone: {
-            required: "Это обязательное поле",
+            required: 'Это обязательное поле',
+            minlength: 'Введите номер плностью'
           },
           policy: {
             required: 'Дайте согласие на обработку данных'

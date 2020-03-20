@@ -26,6 +26,10 @@
       &:last-child {
         flex-grow: 1;
       }
+      &:only-child {
+        margin-right: 0;
+        flex-grow: 0;
+      }
     }
   }
   &::before {
