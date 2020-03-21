@@ -214,6 +214,7 @@
          </p>
          <!-- /.control__text -->
          <form action="send.php" method="POST" id="control-form" class="form control__form">
+          <input type="hidden" name="form" value="Форма секции онлайн контроля">
            <div class="form-item control__form-item">
              <label for="control-name" class="label control__label">Имя</label>
              <input type="text" id="control-name" class="input control__input" name="name" placeholder="Как вас зовут:">
@@ -228,7 +229,7 @@
               Я соглашаюсь с обработкой данных
             </label>
           </div>
-          <button type="submit" class="btn control__btn">Отправить</button>
+          <button type="submit" class="btn control__btn"><span class="load"><img src="img/load.gif"></span>Отправить</button>
          </form>
       </div>
       <!-- /.container -->
@@ -654,6 +655,7 @@
       <div class="footer-wrap footer__wrap">
         <h3 class="footer__title">Остались вопросы?</h3>
         <form action="send.php" method="POST" id="footer-form" class="form footer__form">
+          <input type="hidden" name="form" value="Форма подвала сайта">
           <div class="form-item footer__form-item">
             <label for="footer-name" class="label label_light footer__label">Имя</label>
             <input type="text" id="footer-name" class="input input_light footer__input" name="name" placeholder="Как вас зовут:"> 
@@ -673,7 +675,7 @@
               Я соглашаюсь с обработкой данных
             </label>
           </div>
-          <button type="submit" class="btn footer__btn">Отправить</button>
+          <button type="submit" class="btn footer__btn"><span class="load"><img src="img/load.gif"></span>Отправить</button>
         </form>
       </div>
       <!-- /.footer-wrap -->
@@ -718,10 +720,11 @@
   </footer>
   <!-- /.footer -->
   <div class="overlay"></div>
-  <div class="modal animated dark-section">
-    <button class="modal__close"></button>
+  <div class="modal modal-wind animated dark-section">
+    <button class="modal-close"></button>
     <h4 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h4>
     <form action="send.php" method="POST" id="modal-form" class="form modal__form">
+      <input type="hidden" name="form" value="Форма модального окна">
       <div class="form-item modal__form-item">
         <label for="user-name" class="label label_light form__label">Имя</label>
         <input type="text" id="user-name" class="input input_light form__input" name="name" placeholder="Как вас зовут:">
@@ -741,12 +744,16 @@
           Я соглашаюсь с обработкой данных
         </label>
       </div>
-      <button type="submit" class="btn btn_modal modal__btn">Отправить заявку</button>
+      <button type="submit" class="btn btn_modal modal__btn"><span class="load"><img src="img/load.gif"></span>Отправить заявку</button>
     </form>
   </div>
   <div class="top-btn" title="Наверх"></div>
   <!-- /.top-btn -->
   <!-- /.modal -->
+  <div class="modal modal-alert animated dark-section">
+    <button class="modal-close"></button>
+    <p class="modal-alert__text"></p>
+  </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>

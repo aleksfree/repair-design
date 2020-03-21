@@ -347,3 +347,21 @@ div.invalid {
 input.invalid {
   border-bottom-color: $invalid;
 }
+
+.error {
+  color: $error;
+}
+
+.load {
+  position: absolute;
+  display: none;
+  right: 10px;
+  top: 50%;
+  margin-top: -16px;
+  width: 32px;
+  height: 32px;
+}
+
+.success {
+  color: $success;
+}

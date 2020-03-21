@@ -3,30 +3,37 @@ $(function() {
   var modal = $('.modal'),
       overlay = $('.overlay'),
       modalBtn = $('[data-toggle=modal]'),
-      closeBtn = $('.modal__close'),
+      closeBtn = $('.modal-close'),
       top_show = 0,
-      delay = 1000,
-      data = [overlay, modalBtn, closeBtn];
-
+      delay = 1000;
       /* Modal window */
 
-      function switchModal() {
-        modal.toggleClass('modal_visible');
-        overlay.toggleClass('overlay_visible');
+      function modalOpen(className) {
+        $('.' + className).addClass('modal_visible');
+        overlay.addClass('overlay_visible');
       }
 
-      $.each(data, function(index, value) {
-        value.click(function(e) {
-          e.preventDefault();
-          switchModal();
-        });
+      function modalClose(className) {
+        $('.' + className).removeClass('modal_visible');
+        overlay.removeClass('overlay_visible');
+      }
+
+      modalBtn.click(function() {
+        modalOpen('modal-wind');
+      });
+
+      closeBtn.click(function() {
+        closeBtn.parents('.modal').removeClass('modal_visible');
+        overlay.removeClass('overlay_visible');
+      });
+
+      overlay.click(function() {
+        modalClose('modal');
       });
 
       $(document).keydown(function(e) {
         if(e.which === 27) {
-          if(modal.hasClass('modal_visible')) {
-            switchModal();
-          }
+          modalClose('modal');
         }
       });
 
@@ -51,7 +58,7 @@ $(function() {
       $("a[href^='#']").click(function(e) {
         e.preventDefault();
         var _href = $(this).attr("href");
-        $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, delay / 2);
+        $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, (delay / 2));
       });
 
       /* Slider in projects */
@@ -181,6 +188,10 @@ $(function() {
 
       /* Validation forms */
 
+      function loadIcon(form) {
+        $(form).find('.load').css('display', 'inline-block');
+      }
+
       $('#modal-form').validate({
         errorClass: 'invalid',
         errorElement: 'div',
@@ -222,7 +233,31 @@ $(function() {
           policy: {
             required: 'Дайте согласие на обработку данных'
           }
-        }       
+        },
+        submitHandler: function(form) {
+          $.ajax({
+            type: 'POST',
+            url: 'send.php',
+            data: $(form).serialize(),
+            beforeSend: function() {
+              $(form).find('.load').fadeIn();
+            },
+            success: function(res) {
+              $(form).find('.load').fadeOut();
+              if(res == 1) {
+                $('.modal-alert__text').html('Сообщение успешно отправлено').addClass('success');
+              }
+              else {
+                $('.modal-alert__text').html('Ошибка отправки сообщения').addClass('error');
+              }
+              modalClose('modal-wind');   
+            },
+            complete: function() {
+              $(form)[0].reset();
+              modalOpen('modal-alert');
+            }
+          });
+        }             
       });
 
       $('#footer-form').validate({
@@ -266,7 +301,30 @@ $(function() {
           policy: {
             required: 'Дайте согласие на обработку данных'
           }
-        }       
+        },
+        submitHandler: function(form) {
+          $.ajax({
+            type: 'POST',
+            url: 'send.php',
+            data: $(form).serialize(),
+            beforeSend: function() {
+              $(form).find('.load').fadeIn();
+            },
+            success: function(res) {
+              $(form).find('.load').fadeOut();
+              if(res == 1) {
+                $('.modal-alert__text').html('Сообщение успешно отправлено').addClass('success');
+              }
+              else {
+                $('.modal-alert__text').html('Ошибка отправки сообщения').addClass('error');
+              }
+            },
+            complete: function() {
+              $(form)[0].reset();
+              modalOpen('modal-alert');
+            }
+          });
+        }   
       });
 
       $('#control-form').validate({
@@ -302,7 +360,30 @@ $(function() {
           policy: {
             required: 'Дайте согласие на обработку данных'
           }
-        }       
+        },
+        submitHandler: function(form) {
+          $.ajax({
+            type: 'POST',
+            url: 'send.php',
+            data: $(form).serialize(),
+            beforeSend: function() {
+              $(form).find('.load').fadeIn();
+            },
+            success: function(res) {
+              $(form).find('.load').fadeOut();
+              if(res == 1) {
+                $('.modal-alert__text').html('Сообщение успешно отправлено').addClass('success');
+              }
+              else {
+                $('.modal-alert__text').html('Ошибка отправки сообщения').addClass('error');
+              }
+            },
+            complete: function() {
+              $(form)[0].reset();
+              modalOpen('modal-alert');
+            }
+          });
+        }      
       });
 
       /* Mask */

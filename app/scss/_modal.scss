@@ -1,27 +1,29 @@
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 506px;
-  height: 509px;
-  display: none;
-  margin: auto;
-  padding: 33px 3.4vw 27px;
-  background: $dark url('../img/bg-modal.svg') no-repeat center;
-  background-size: cover;
-  z-index: 199;
+  &-wind {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 506px;
+    height: 509px;
+    display: none;
+    margin: auto;
+    padding: 33px 3.4vw 27px;
+    background: $dark url('../img/bg-modal.svg') no-repeat center;
+    background-size: cover;
+    z-index: 199;
+    @include media('sm') {
+      width: 90%;
+      padding-left: 5vw;
+      padding-right: 5vw;
+    }
+  }
   &_visible {
-    display: block;
+    display: block!important;
     animation: fadeInUp 0.7s ease;
   }
-  @include media('sm') {
-    width: 90%;
-    padding-left: 5vw;
-    padding-right: 5vw;
-  }
-  &__close {
+  &-close {
     position: absolute;
     top: 13px;
     right: 14px;
@@ -55,6 +57,28 @@
     margin-top: 36px;
     @include media('sm') {
       align-self: center;
+    }
+  }
+  &-alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    width: 506px;
+    height: 90px;
+    padding: 33px 3.4vw 33px;
+    z-index: 199;
+    margin: auto;
+    @include media('sm') {
+      width: 90%;
+      padding-left: 5vw;
+      padding-right: 5vw;
+    }
+    &__text {
+      margin: 0;
+      font-size: 20px;
     }
   }
 }
