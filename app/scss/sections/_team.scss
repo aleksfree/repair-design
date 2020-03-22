@@ -1,15 +1,17 @@
 .team {
   position: relative;
-  padding: 0 0 320px;
-  @include media('xl') {
+  padding: 0 0 97px;
+  @include media('lg') {
     background: $dark;
+    padding-top: 50px;
   }
   @include media('md') {
     padding-top: 50px;
     padding-bottom: 160px;
   }
   @include media('sm') {
-    padding: 19px 0 0;
+    background: $dark;
+    padding: 0;
   }
   &-list {
     display: flex;
@@ -20,12 +22,23 @@
       align-items: center;
     }
     @include media('sm') {
-      align-items: flex-end;
+      align-items: center;
+    }
+    &__img {
+      @include media('sm') {
+        height: 361px;
+      }
+      img {
+        @include media('sm') {
+          
+        }
+      }
     }
     &__icon {
       position: absolute;
       top: -51px;
       left: -54px;
+      z-index: 2;
       width: 110px;
       height: 110px;
       @include media('sm') {
@@ -49,7 +62,8 @@
         width: 70%;
       }
       @include media('sm') {
-        width: 81.1vw;
+        margin-right: -35px;
+        width: 303px;
       }
     }
     &__text {
@@ -62,8 +76,8 @@
       background: $light;
       box-shadow: 0px 10px 15px rgba($darken, 0.05);
       @include media('sm') {
+        margin: -86px auto 0;
         width: 77%;
-        margin: -82px auto 0;
       }
     }
     &__title {
@@ -91,7 +105,7 @@
     margin-top: -406px;
     margin-bottom: 16px;
     color: $light;
-    @include media('xl') {
+    @include media('lg') {
       margin-top: 0;
     }
     @include media('sm') {
@@ -108,15 +122,15 @@
   }
   &__text {
     max-width: 568px;
-    margin: 51px auto;
+    margin: 53px auto 0;
     font-size: 20px;
     text-align: center;
     line-height: 1.7;
-    @include media('xl') {
-      color: $light;
-    }
     @include media('lg') {
       display: none;
+    }
+    @include media('sm') {
+      color: $light;
     }
     &::before {
       @include pseudo(block, static);

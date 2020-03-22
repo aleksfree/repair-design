@@ -95,6 +95,10 @@ a, button {
 }
 
 .card {
+  @include media('sm') {
+    max-width: 340px;
+    margin: 0 auto;
+  }
   &__img {
     position: relative;
     width: 100%;
@@ -116,7 +120,7 @@ a, button {
     position: relative;
     width: 84%;
     margin: -127px auto 0;
-    padding: 25px 8% 53px;
+    padding: 26px 8% 51px;
     background: $light;
     box-shadow: 10px 10px 20px rgba($darken, 0.03);
     @include media('xl') {
@@ -129,12 +133,12 @@ a, button {
     @include media('sm') {
       width: 80%;
       margin-top: -141px;
-      padding: 21px 9% 35px;
+      padding: 21px 9% 37px;
       margin-left: 0;
     }
   }
   &__title {
-    margin: 0 0 11px;
+    margin: 0 0 12px;
     font-size: 18px;
     color: $grey;
     white-space: nowrap;
@@ -152,9 +156,27 @@ a, button {
     @include media('sm') {
       font-size: 13px;
     }
+    &_main {
+      .card__item {
+        &:last-child::after {
+          @include pseudo(none, static, ' ...');
+          @include media('sm') {
+            display: inline;
+          }
+        }
+      } 
+    }
+    &_additional {
+      @include media('sm') {
+        display: none;
+      }
+    }
   }
   &__item {
     margin-bottom: 8px;
+    @include media('sm') {
+      margin-bottom: 7px;
+    }
   }
   &__label {
     position: absolute;
@@ -296,7 +318,7 @@ a, button {
   }
   &__text {
     max-width: 442px;
-    margin: 24px 0 0;
+    margin: 21px 0 0;
     font-size: 18px;
     line-height: 1.61;
     @include media('xl') {
@@ -315,8 +337,17 @@ a, button {
   }
   &-title {
     &_narrow {
-      max-width: 305px;
+      max-width: 170px;
       letter-spacing: 0;
+      &::after {
+        right: -134px;
+        @include media('xl') {
+          display: none;
+        }
+      }
+      @include media('lg') {
+        max-width: 100%;
+      }
     }
   }
 }

@@ -10,6 +10,9 @@
   @include media('xl') {
     font-size: 12px;
   }
+  @include media('md') {
+    position: absolute;
+  }
 }
 
 .menu {

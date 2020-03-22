@@ -10,7 +10,7 @@
   <script src="https://api-maps.yandex.ru/2.1/?apikey=d8885b28-6dbd-4f4c-9449-d571f05834e6&lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
-  <header class="header">
+  <header id="header" class="header">
     <div class="container">
       <div class="menu">
         <div class="logo menu__logo wow fadeInLeft">Repair Design Project</div>
@@ -32,7 +32,7 @@
     <!-- /.container -->
   </header>
   <main>
-    <section class="hero dark-section">
+    <section id="hero" class="hero dark-section">
       <div class="instagram hero__instagram">
         <a href="#" class="instagram__link">Instagram</a>
       </div>
@@ -193,12 +193,12 @@
     </section>
     <!-- /.projects -->
     <!-- /.hero -->
-    <section class="section control">
+    <section id="control" class="control">
       <div class="container">
-        <div class="section-heading section-heading_light section__heading control__section-heading">
+        <div class="section-heading section-heading_light control__section-heading">
           <h2 class="section-heading__title">Онлайн контроль</h2>
           <div class="section-heading__img">
-            <img src="../img/camera.svg" alt="Онлайн контроль">
+            <img src="img/camera.svg" alt="Онлайн контроль">
           </div>
         </div>
          <!-- /.section-heading -->
@@ -235,12 +235,12 @@
       <!-- /.container -->
     </section>
     <!-- /.control -->
-    <section class="section types">
+    <section id="types" class="types">
       <div class="container">
-        <div class="section-heading section__heading">
+        <div class="section-heading types__section-heading">
           <h2 class="section-heading__title">Виды ремонта</h2>
           <div class="section-heading__img">
-            <img src="../img/types.svg" alt="Виды ремонта">
+            <img src="img/types.svg" alt="Виды ремонта">
           </div>
         </div>
          <!-- /.section-heading -->
@@ -332,12 +332,12 @@
       <!-- /.container -->
     </section>
     <!-- /.types -->
-    <section class="design">
+    <section id="design" class="design">
       <div class="container">
-        <div class="section-heading section__heading design__heading">
+        <div class="section-heading design__section-heading">
           <h2 class="section-heading__title">Дизайн проект</h2>
           <div class="section-heading__img">
-            <img src="../img/design.svg" alt="Дизайн проект">
+            <img src="img/design.svg" alt="Дизайн проект">
           </div>
         </div>
         <!-- /.section-heading -->
@@ -406,7 +406,7 @@
                 <div class="card__text wow fadeInUp" data-wow-delay="1s">
                   <h3 class="card__title">Полный</h3>
                   <!-- /.card__title -->
-                  <ul class="card__list">
+                  <ul class="card__list card__list_main">
                     <li class="card__item">Измерительные чертежи</li>
                     <li class="card__item">Перепланировка</li>
                     <li class="card__item">Планировка мебели</li>
@@ -414,6 +414,8 @@
                     <li class="card__item">План этажей</li>
                     <li class="card__item">План электрики</li>
                     <li class="card__item">План света</li>
+                  </ul>
+                  <ul class="card__list card__list_additional">
                     <li class="card__item">Стенные развертки</li>
                     <li class="card__item">3D визуализация</li>
                     <li class="card__item">Смета на материалы</li>
@@ -435,13 +437,13 @@
       <!-- /.container -->
     </section>
     <!-- /.design -->
-    <div class="steps dark-section">
+    <div id="steps" class="steps dark-section">
       <div class="container">
         <div class="row">
           <div class="steps__left">
             <div class="heading-decorate steps__heading-decorate">
               <span class="heading-decorate__suptitle">Как мы работаем</span>
-              <h2 class="heading-decorate-title_narrow heading-decorate__title">6 шагов<br>до цели</h2>
+              <h2 class="heading-decorate-title_narrow heading-decorate__title">6 шагов до цели</h2>
             </div>
             <!-- /.heading-decorate -->
             <div class="steps-counter steps__counter"></div>
@@ -561,7 +563,7 @@
           </div>
           <!-- /.steps__left -->
           <div class="steps__right">
-            <div class="slider-chapters"></div> 
+            <div class="slider-chapters steps__slider-chapters"></div> 
             <div class="swiper-container steps-slider_right swiper-no-swiping">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -593,12 +595,12 @@
       <!-- /.container -->
     </div>
     <!-- /.steps -->
-    <section class="team">
+    <section id="team" class="team">
       <div class="container">
         <div class="section-heading section__heading team__heading">
           <h2 class="section-heading__title">Наша команда</h2>
           <div class="section-heading__img">
-            <img src="../img/team.svg" alt="Наша команда">
+            <img src="img/team.svg" alt="Наша команда">
           </div>
         </div>
         <!-- /.section-heading -->
@@ -609,7 +611,9 @@
         <div class="team-list team__list">
           <div class="team-list__item">
             <img src="img/team-icon-1.svg" alt="Idea" class="team-list__icon">
-            <img src="img/team-img-1.jpg" alt="Алексей Колмаков" class="team-list__img">
+            <div class="team-list__img">
+              <img src="img/team-img-1.jpg" alt="Алексей Колмаков" class="team-list__img">
+            </div>
             <div class="team-list__text">
               <h4 class="team-list__title">Алексей Колмаков</h4>
               <p class="team-list__descr">Проектный менеджер</p>
@@ -619,7 +623,9 @@
           <!-- /.team-list__item -->
           <div class="team-list__item">
             <img src="img/team-icon-2.svg" alt="Design" class="team-list__icon">
-            <img src="img/team-img-2.jpg" alt="Алексей Колмаков" class="team-list__img">
+            <div class="team-list__img">
+              <img src="img/team-img-2.jpg" alt="Алиса Сухорукова" class="team-list__img">
+            </div>
             <div class="team-list__text">
               <h4 class="team-list__title">Алиса Сухорукова</h4>
               <p class="team-list__descr">Дизайнер</p>
@@ -629,7 +635,9 @@
           <!-- /.team-list__item -->
           <div class="team-list__item">
             <img src="img/team-icon-3.svg" alt="Portfolio" class="team-list__icon">
-            <img src="img/team-img-3.jpg" alt="Алексей Колмаков" class="team-list__img">
+            <div class="team-list__img">
+              <img src="img/team-img-3.jpg" alt="Давид Волынев" class="team-list__img">
+            </div>
             <div class="team-list__text">
               <h4 class="team-list__title">Давид Волынев</h4>
               <p class="team-list__descr">Бригадир</p>
@@ -639,7 +647,7 @@
           <!-- /.team-list__item -->
         </div>
         <!-- /.team-list -->
-        <p class="team__text">
+        <p class="team__text wow fadeInUp">
           Каждый сотрудник нашей компании является квалифицированным штатным специалистом 
           с опытом работы от 6 лет. У нас нет  гастарбайтеров, каждый сотрудник выполняет 
           работу, соответствующую его специальности.
@@ -649,8 +657,105 @@
       <!-- /.container -->
     </section>
     <!-- /.team -->
+    <section id="clients" class="clients">
+      <div class="container">
+        <div class="section-heading clients__section-heading">
+          <h2 class="section-heading__title">Наши клиенты</h2>
+          <div class="section-heading__img">
+            <img src="img/clients.svg" alt="Наши клиенты">
+          </div>
+        </div>
+        <p class="clients__subtitle">
+          80% наших клиентов рекомендуют нас своим знакомым и друзьям
+        </p>
+        <div class="clients__list">
+          <div class="clients-item clients__item">
+            <div class="clients-item__heading">
+              <div class="clients-item__img">
+                <img src="img/clients-img-1.jpg" alt="Савельева Екатерина Львовна">
+              </div>
+              <h3 class="clients-item__title">Савельева Екатерина Львовна</h3>
+            </div>
+            <p class="clients-item__text">
+              Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, 
+              что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его 
+              профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда 
+              мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. 
+              Я рекомендую этих мастеров.
+            </p>
+            <div class="clients-item__footer">
+              <div class="clients-item__info clients-item__info_left">
+                <img src="img/icon-size.svg" alt="">
+                40 M<sup>2</sup>
+              </div>
+              <div class="clients-item__info clients-item__info_right">
+                <img src="img/icon-calendar.svg" alt="">
+                48 дней
+              </div>
+            </div>
+          </div>
+          <!-- /.clients-item -->
+          <div class="clients-item clients__item">
+            <div class="clients-item__heading">
+              <div class="clients-item__img">
+                <img src="img/clients-img-2.jpg" alt="Большов Михаил Анатольевич">
+              </div>
+              <h3 class="clients-item__title">Большов Михаил Анатольевич</h3>
+            </div>
+            <p class="clients-item__text">
+              Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, 
+              что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его 
+              профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда 
+              мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. 
+              Я рекомендую этих мастеров.
+            </p>
+            <div class="clients-item__footer">
+              <div class="clients-item__info clients-item__info_left">
+                <img src="img/icon-size.svg" alt="">
+                90 M<sup>2</sup>
+              </div>
+              <div class="clients-item__info clients-item__info_right">
+                <img src="img/icon-calendar.svg" alt="">
+                128 дней
+              </div>
+            </div>
+          </div>
+          <!-- /.clients-item -->
+          <div class="clients-item clients__item">
+            <div class="clients-item__heading">
+              <div class="clients-item__img">
+                <img src="img/clients-img-3.jpg" alt="Хасанов Даниил Муратович">
+              </div>
+              <h3 class="clients-item__title">Хасанов Даниил Муратович</h3>
+            </div>
+            <p class="clients-item__text">
+              Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, 
+              что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его 
+              профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда 
+              мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. 
+              Я рекомендую этих мастеров.
+            </p>
+            <div class="clients-item__footer">
+              <div class="clients-item__info clients-item__info_left">
+                <img src="img/icon-size.svg" alt="">
+                56 M<sup>2</sup>
+              </div>
+              <div class="clients-item__info clients-item__info_right">
+                <img src="img/icon-calendar.svg" alt="">
+                86 дней
+              </div>
+            </div>
+          </div>
+          <!-- /.clients-item -->
+        </div>
+        <!-- /.clients__list -->
+      </div>
+      <!-- /.container -->
+      </div>
+    </section>
+    <!-- /.clients -->
   </main>
-  <footer class="footer dark-section">
+  <footer id="footer" class="footer dark-section">
     <div class="container">
       <div class="footer-wrap footer__wrap">
         <h3 class="footer__title">Остались вопросы?</h3>

@@ -1,9 +1,19 @@
 .steps {
+  position: relative;
   padding: 426px 0 502px;
   background: $dark url('../img/bg-steps.svg') no-repeat center / cover;
+  @include media('lg') {
+    padding: 170px 0 100px;
+  }
+  @include media('sm') {
+    display: none;
+  }
   &-slider {
     &_right {
       height: 26.5vw;
+      @include media('md') {
+        height: 37.5vw;
+      }
     }
     &__title {
       max-width: 260px;
@@ -15,6 +25,9 @@
     }
     &__descr {
       max-width: 325px;
+      @include media('md') {
+        width: 520px;
+      }
       p {
         margin-top: 0;
         margin-bottom: 11px;
@@ -30,18 +43,40 @@
   }
   &__heading-decorate {
     margin-bottom: 87px;
+    @include media('lg') {
+      position: absolute;
+      margin-bottom: 0;
+      width: 100%;
+      left: 50%;
+      top: 50px;
+      transform: translateX(-50%);
+    }
   }
   &__left {
     width: 35%;
+    @include media('md') {
+      width: 520px;
+    }
   }
   &__right {
     padding-top: 90px;
     width: 62%;
+    @include media('lg') {
+      padding-top: 0;
+    }
+    @include media('md') {
+      width: 520px;
+    }
   }
   &__slider-nav {
     margin-top: 65px;
+    @include media('md') {
+      margin: 35px 0;
+    }
   }
-  @include media('xl') {
-    display: none;
+  &__slider-chapters {
+    @include media('lg') {
+      display: none;
+    }
   }
 }

@@ -392,7 +392,6 @@ $(function() {
 
       /* Yandex Map */
 
-      ymaps.ready(init);
       function init(){
           var myMap = new ymaps.Map('map', {
               center: [47.24472357536472,39.72318282705297],
@@ -400,8 +399,8 @@ $(function() {
           });
 
           myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Собственный значок метки',
-            balloonContent: 'Это красивая метка'
+            hintContent: 'Россия, Ростов-на-Дону, улица Нансена, 239',
+            balloonContent: 'Вход со двора'
           }, {
               iconLayout: 'default#image',
               iconImageHref: 'img/location.png',
@@ -412,4 +411,11 @@ $(function() {
           myMap.geoObjects.add(myPlacemark);
           myMap.behaviors.disable('scrollZoom');
       }
+
+      $(window).bind('scroll', function() {
+        if($(this).scrollTop() > $('#team').offset().top) {
+          ymaps.ready(init);
+          $(this).unbind('scroll');
+        }
+      });
 });

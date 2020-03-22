@@ -1,11 +1,17 @@
 .types {
-  padding: 142px 0 124px;
+  padding: 144px 0 124px;
   @include media('sm') {
     padding: 83px 0 208px;
   }
   &__card {
     @include media('md') {
-      margin-bottom: 74px;
+      margin-bottom: 78px;
+    }
+  }
+  &__section-heading {
+    margin-bottom: 31px;
+    @include media('sm') {
+      margin-bottom: 36px;
     }
   }
 }
