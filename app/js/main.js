@@ -167,7 +167,7 @@ $(function() {
 
       var stepsSwiperRight = new Swiper('.steps-slider_right', {
         loop: true,
-        effect: 'cube',
+        effect: 'fade',
 
         pagination: {
           el: '.steps__slider-pagination',

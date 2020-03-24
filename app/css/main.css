@@ -3725,6 +3725,14 @@ template {
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Yeseva One';
+  src: url("../fonts/eseva/Yeseva One.woff2") format("woff2"), url("../fonts/eseva/Yeseva One.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Settings */
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
@@ -3734,6 +3742,7 @@ template {
 body {
   font-family: 'Futura Book', sans-serif;
   font-size: 15px;
+  overflow-x: hidden;
 }
 
 @media screen and (max-width: 575px) {
