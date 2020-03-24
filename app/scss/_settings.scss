@@ -363,10 +363,12 @@ a, button {
   }
 }
 
+/* uncss:ignore */
 .invalid {
   color: $invalid;
 }
 
+/* uncss:ignore */
 div.invalid {
   position: absolute;
   width: 100%;
@@ -375,14 +377,17 @@ div.invalid {
   font-size: 12px;
 }
 
+/* uncss:ignore */
 input.invalid {
   border-bottom-color: $invalid;
 }
 
+/* uncss:ignore */
 .error {
   color: $error;
 }
 
+/* uncss:ignore */
 .load {
   position: absolute;
   display: none;
@@ -393,6 +398,7 @@ input.invalid {
   height: 32px;
 }
 
+/* uncss:ignore */
 .success {
   color: $success;
 }

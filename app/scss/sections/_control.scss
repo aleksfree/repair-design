@@ -1,4 +1,5 @@
 .control {
+  position: relative;
   padding: 0;
   @include media('md') {
     padding-top: 50px;
@@ -9,11 +10,15 @@
   }
   &__section-heading {
     margin-top: -324px;
+    margin-bottom: 30px;
     @include media('lg') {
       margin-top: -260px;
     }
     @include media('md') {
       margin-top: 0;
+    }
+    @include media('sm') {
+      margin-bottom: 40px;
     }
   }
   &__video {
@@ -30,7 +35,7 @@
       color: $light;
     }
     @include media('sm') {
-      margin: 25px auto 28px;
+      margin: 26px auto 28px;
       font-size: 14px;
     }
     &::before {

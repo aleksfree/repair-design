@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Repair Design</title>
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-  <link rel="stylesheet" href="css/main.min.css">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=d8885b28-6dbd-4f4c-9449-d571f05834e6&lang=ru_RU" type="text/javascript"></script>
+  <!-- build:css -->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- endbuild -->
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=d8885b28-6dbd-4f4c-9449-d571f05834e6&lang=ru_RU"></script>
 </head>
 <body>
   <header id="header" class="header">
@@ -229,7 +231,7 @@
               Я соглашаюсь с обработкой данных
             </label>
           </div>
-          <button type="submit" class="btn control__btn"><span class="load"><img src="img/load.gif"></span>Отправить</button>
+          <button type="submit" class="btn control__btn"><span class="load"><img src="img/load.gif" alt=""></span>Отправить</button>
          </form>
       </div>
       <!-- /.container -->
@@ -751,7 +753,6 @@
         <!-- /.clients__list -->
       </div>
       <!-- /.container -->
-      </div>
     </section>
     <!-- /.clients -->
   </main>
@@ -774,13 +775,13 @@
             <input type="text" id="footer-question" class="input input_light footer__input" name="quest" placeholder="Я хочу спросить:">
           </div>
           <div class="policy footer__policy">
-            <input type="checkbox"id="footer-checkbox" class="policy__checkbox" name="policy">
+            <input type="checkbox" id="footer-checkbox" class="policy__checkbox" name="policy">
             <label for="footer-checkbox" class="policy__label">
               <span class="checkbox-icon"></span>
               Я соглашаюсь с обработкой данных
             </label>
           </div>
-          <button type="submit" class="btn footer__btn"><span class="load"><img src="img/load.gif"></span>Отправить</button>
+          <button type="submit" class="btn footer__btn"><span class="load"><img src="img/load.gif" alt=""></span>Отправить</button>
         </form>
       </div>
       <!-- /.footer-wrap -->
@@ -849,7 +850,7 @@
           Я соглашаюсь с обработкой данных
         </label>
       </div>
-      <button type="submit" class="btn btn_modal modal__btn"><span class="load"><img src="img/load.gif"></span>Отправить заявку</button>
+      <button type="submit" class="btn btn_modal modal__btn"><span class="load"><img src="img/load.gif" alt=""></span>Отправить заявку</button>
     </form>
   </div>
   <div class="top-btn" title="Наверх"></div>
@@ -861,9 +862,11 @@
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-  <script src="js/jquery.validate.min.js"></script>
-  <script src="js/jquery.mask.min.js"></script>
-  <script src="js/wow.min.js"></script>
+  <!-- build:js -->
+  <script src="js/libs/jquery.validate.min.js"></script>
+  <script src="js/libs/jquery.mask.min.js"></script>
+  <script src="js/libs/wow.min.js"></script>
   <script src="js/main.js"></script>
+  <!-- endbuild -->
 </body>
 </html>
