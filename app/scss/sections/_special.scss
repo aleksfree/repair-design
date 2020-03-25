@@ -1,0 +1,20 @@
+.special {
+  position: relative;
+  height: 645px;
+  background: url('../img/bg-special.png') no-repeat top left;
+}
+
+.line {
+  &-2 {
+    animation-delay: 1s;
+  }
+  &-3 {
+    animation-delay: 1.5s;
+  }
+  &-4 {
+    animation-delay: 2s;
+  }
+  &-5 {
+    animation-delay: 2.5s;
+  }
+}

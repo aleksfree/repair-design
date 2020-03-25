@@ -12,6 +12,11 @@
   }
   @include media('sm') {
     display: block;
+    min-height: 535px;
+  }
+  @media (max-height: 499px) {
+    height: auto;
+    padding-bottom: 50px;
   }
   &-content {
     max-width: 510px;
@@ -83,6 +88,9 @@
       border: 2px solid $primary;
       border-radius: 50%;
     }
+    @media (max-height: 499px) {
+      display: none;
+    }
     @include media('md') {
       display: none;
     }
@@ -122,9 +130,6 @@
       flex-direction: column;
     }
   }
-  @include media('sm') {
-    height: 535px;
-  }
 }
 
 .instagram {
@@ -156,6 +161,9 @@
   text-transform: uppercase;
   @include media('xl') {
     font-size: 36px;
+  }
+  @media (max-height: 499px) {
+    font-size: 32px;
   }
   @include media('sm') {
     max-width: 300px;

@@ -246,6 +246,7 @@ $(function() {
               $(form).find('.load').fadeOut();
               if(res == 1) {
                 $('.modal-alert__text').html('Сообщение успешно отправлено').addClass('success');
+                ym(61333318,'reachGoal','submitForm');
               }
               else {
                 $('.modal-alert__text').html('Ошибка отправки сообщения').addClass('error');
@@ -314,6 +315,7 @@ $(function() {
               $(form).find('.load').fadeOut();
               if(res == 1) {
                 $('.modal-alert__text').html('Сообщение успешно отправлено').addClass('success');
+                ym(61333318,'reachGoal','submitForm');
               }
               else {
                 $('.modal-alert__text').html('Ошибка отправки сообщения').addClass('error');
@@ -373,6 +375,7 @@ $(function() {
               $(form).find('.load').fadeOut();
               if(res == 1) {
                 $('.modal-alert__text').html('Сообщение успешно отправлено').addClass('success');
+                ym(61333318,'reachGoal','submitForm');
               }
               else {
                 $('.modal-alert__text').html('Ошибка отправки сообщения').addClass('error');
@@ -437,5 +440,10 @@ $(function() {
       function videoPlay(event) {
         event.target.playVideo();
       }
+
+      $('.ym-btn').click(function() {
+        ym(61333318,'reachGoal','clickButton');
+        return true;
+      });
 
 });

@@ -5,23 +5,36 @@
     left: 0;
     bottom: 0;
     right: 0;
+    display: none;
     width: 506px;
     height: 509px;
-    display: none;
     margin: auto;
     padding: 33px 3.4vw 27px;
     background: $dark url('../img/bg-modal.svg') no-repeat center;
     background-size: cover;
     z-index: 199;
+    @media (max-height: 600px) {
+      flex-direction: column;
+      padding: 15px 20px 15px;
+      max-height: 300px;
+      width: 100%;
+      max-width: 670px;
+    }
     @include media('sm') {
       width: 90%;
       padding-left: 5vw;
       padding-right: 5vw;
     }
+    @media screen and(max-width: 575px) and (max-height: 600px) {
+      padding: 15px;
+    }
   }
   &_visible {
     display: block!important;
     animation: fadeInUp 0.7s ease;
+    @media (max-height: 600px) {
+      display: flex!important;
+    }
   }
   &-close {
     position: absolute;
@@ -44,12 +57,29 @@
     @include media('sm') {
       font-size: 16px;
     }
+    @media (max-height: 600px) {
+      max-width: 100%;
+    }
   }
   &__form {
     display: flex;
     flex-direction: column;
+    @media (max-height: 600px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      justify-content: space-between;
+      align-content: space-between;
+    }
     &-item {
       margin-bottom: 46px;
+      @media (max-height: 600px) {
+        width: 45%;
+        margin-bottom: 0;
+      }
+      @media screen and(max-width: 575px) and (max-height: 600px) {
+        width: 48%;
+      }
     }
   }
   &__btn {
@@ -57,6 +87,9 @@
     margin-top: 36px;
     @include media('sm') {
       align-self: center;
+    }
+    @media (max-height: 600px) {
+      margin-top: 0;
     }
   }
   &-alert {
@@ -79,6 +112,18 @@
     &__text {
       margin: 0;
       font-size: 20px;
+    }
+  }
+  &__policy {
+    @media (max-height: 600px) {
+      margin-top: 0;
+      width: 45%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+    }
+    @media screen and(max-width: 575px) and (max-height: 600px) {
+      width: 48%;
     }
   }
 }

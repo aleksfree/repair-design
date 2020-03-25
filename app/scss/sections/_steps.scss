@@ -1,7 +1,6 @@
 .steps {
   position: relative;
   padding: 426px 0 502px;
-  background: $dark url('../img/bg-steps.svg') no-repeat center / cover;
   @include media('lg') {
     padding: 170px 0 100px;
   }
@@ -25,8 +24,8 @@
     }
     &__descr {
       max-width: 325px;
-      @include media('md') {
-        width: 520px;
+      @include media('lg') {
+        max-width: 520px;
       }
       p {
         margin-top: 0;
@@ -54,6 +53,9 @@
   }
   &__left {
     width: 35%;
+    @include media('lg') {
+      width: 45%;
+    }
     @include media('md') {
       width: 520px;
     }
@@ -62,9 +64,11 @@
     padding-top: 90px;
     width: 62%;
     @include media('lg') {
-      padding-top: 0;
+      width: 50%;
+      padding-top: 40px;
     }
     @include media('md') {
+      padding-top: 0;
       width: 520px;
     }
   }

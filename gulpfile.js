@@ -31,8 +31,8 @@ function cssStyle() {
     overrideBrowserslist: ['last 2 versions'],
     cascade: false
   }))
-  .pipe(sourcemaps.write('./'))
   .pipe(dest("app/css"))
+  .pipe(browserSync.stream());
 };
 
 function watchFiles() {

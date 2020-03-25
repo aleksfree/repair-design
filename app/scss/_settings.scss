@@ -274,6 +274,7 @@ a, button {
       width: 18px;
       height: 18px;
       border-radius: 1px;
+      flex-shrink: 0;
       background: $primary;
     }
   }
