@@ -8,7 +8,6 @@
   <!-- build:css -->
   <link rel="stylesheet" href="css/main.css">
   <!-- endbuild -->
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=d8885b28-6dbd-4f4c-9449-d571f05834e6&lang=ru_RU"></script>
 </head>
 <body>
   <header id="header" class="header">
@@ -203,7 +202,8 @@
           </div>
         </div>
          <!-- /.section-heading -->
-         <div class="video control__video">
+         <div id="player" class="video control__video">
+          <script src="https://www.youtube.com/iframe_api"></script>
           <img src="img/play.svg" alt="Play" class="video__play">
          </div>
          <!-- /.control__video -->
@@ -861,6 +861,7 @@
   </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=d8885b28-6dbd-4f4c-9449-d571f05834e6&lang=ru_RU"></script>
   <!-- build:js -->
   <script src="js/libs/jquery.validate.min.js"></script>
   <script src="js/libs/jquery.mask.min.js"></script>

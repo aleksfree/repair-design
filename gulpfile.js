@@ -68,7 +68,7 @@ function buildCss(done) {
   var plugins = [
     postUncss({
       html: ['app/index.html'],
-      ignore: [/\.swiper-pagination-bullet.*/, /\.modal.*/, /\.overlay.*/, /\.slider.*/]
+      ignore: [/\.swiper-.*/, /\.modal.*/, /\.overlay.*/, /\.slider.*/]
     })
   ];
   src('app/css/**/*.css')
