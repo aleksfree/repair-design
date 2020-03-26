@@ -5254,6 +5254,19 @@ input.invalid {
   background: url("../img/bg-special.png") no-repeat top left;
 }
 
+@media screen and (max-width: 1199px) {
+  .special {
+    padding: 50px 0 150px;
+    background-position: top -30px left 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .special {
+    display: none;
+  }
+}
+
 .special__wrapper {
   padding: 0 10px;
   display: -webkit-box;
@@ -5264,6 +5277,14 @@ input.invalid {
   justify-content: flex-end;
 }
 
+@media screen and (max-width: 1199px) {
+  .special__wrapper {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+}
+
 .special__list {
   position: absolute;
   top: 50px;
@@ -5271,6 +5292,30 @@ input.invalid {
   width: 636px;
   height: 636px;
   background: url("../img/rect.svg") no-repeat top right;
+}
+
+@media screen and (max-width: 1439px) {
+  .special__list {
+    left: -340px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .special__list {
+    width: auto;
+    height: auto;
+    background: none;
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
 }
 
 .special__list-item {
@@ -5283,6 +5328,14 @@ input.invalid {
   align-items: center;
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
+}
+
+@media screen and (max-width: 1199px) {
+  .special__list-item {
+    position: static;
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
 }
 
 .special__list-item-1 {
@@ -5345,6 +5398,12 @@ input.invalid {
   margin: 38px 0 0 32px;
 }
 
+@media screen and (max-width: 1199px) {
+  .special__money {
+    display: none;
+  }
+}
+
 .special__money-icon {
   width: 72px;
   height: 72px;
@@ -5362,6 +5421,10 @@ input.invalid {
   font-size: 20px;
   color: #E3B873;
   text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+}
+
+.special__feedback {
+  width: 420px;
 }
 
 /* Design */

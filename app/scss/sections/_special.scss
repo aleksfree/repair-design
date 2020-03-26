@@ -2,10 +2,20 @@
   position: relative;
   padding: 100px 0 242px;
   background: url('../img/bg-special.png') no-repeat top left;
+  @include media('xl') {
+    padding: 50px 0 150px;
+    background-position: top -30px left 0;
+  }
+  @include media('lg') {
+    display: none;
+  }
   &__wrapper {
     padding: 0 10px;
     display: flex;
     justify-content: flex-end;
+    @include media('xl') {
+      justify-content: space-between;
+    }
   }
   &__list {
     position: absolute;
@@ -14,11 +24,27 @@
     width: 636px;
     height: 636px;
     background: url('../img/rect.svg') no-repeat top right;
+    @include media('xxl') {
+      left: -340px;
+    }
+    @include media('xl') {
+      width: auto;
+      height: auto;
+      background: none;
+      position: static;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
     &-item {
       position: absolute;
       display: flex;
       align-items: center;
       transform: translateX(100%);
+      @include media('xl') {
+        position: static;
+        transform: translateX(0%);
+      }
       &-1 {
         top: 9.75%;
         right: 19.34%;
@@ -62,6 +88,9 @@
     display: flex;
     align-items: center;
     margin: 38px 0 0 32px;
+    @include media('xl') {
+      display: none;
+    }
     &-icon {
       width: 72px;
       height: 72px;
@@ -77,5 +106,8 @@
       color: $primary;
       text-shadow: 0px 3px 10px rgba($primary, 0.15);
     }
+  }
+  &__feedback {
+    width: 420px;
   }
 }
