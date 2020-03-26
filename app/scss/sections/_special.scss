@@ -1,20 +1,81 @@
 .special {
   position: relative;
-  height: 645px;
+  padding: 100px 0 242px;
   background: url('../img/bg-special.png') no-repeat top left;
-}
-
-.line {
-  &-2 {
-    animation-delay: 1s;
+  &__wrapper {
+    padding: 0 10px;
+    display: flex;
+    justify-content: flex-end;
   }
-  &-3 {
-    animation-delay: 1.5s;
+  &__list {
+    position: absolute;
+    top: 50px;
+    left: -156px;
+    width: 636px;
+    height: 636px;
+    background: url('../img/rect.svg') no-repeat top right;
+    &-item {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      transform: translateX(100%);
+      &-1 {
+        top: 9.75%;
+        right: 19.34%;
+      }
+      &-2 {
+        top: 27.2%;
+        right: 7.63%;
+      }
+      &-3 {
+        top: 52.52%;
+        right: 3.3%;
+      }
+      &-4 {
+        top: 77.67%;
+        right: 13.84%;
+      }
+    }
+    &-number {
+      width: 42px;
+      height: 42px;
+      margin-right: 17px;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      font-family: 'Yeseva One', cursive;
+      border-radius: 50%;
+      background: $primary;
+      color: $light;
+    }
+    &-text {
+      max-width: 365px;
+      font-family: 'Futura Medium';
+      font-size: 18px;
+      color: $grey;
+    }
   }
-  &-4 {
-    animation-delay: 2s;
-  }
-  &-5 {
-    animation-delay: 2.5s;
+  &__money {
+    max-width: 415px;
+    display: flex;
+    align-items: center;
+    margin: 38px 0 0 32px;
+    &-icon {
+      width: 72px;
+      height: 72px;
+      margin-right: 25px;
+      flex-shrink: 0;
+      background: $primary url('../img/money.svg') no-repeat center;
+      box-shadow: 0px 10px 20px rgba($primary, 0.2);
+      border-radius: 50%;
+    }
+    &-text {
+      font-family: 'Futura Demi', sans-serif;
+      font-size: 20px;
+      color: $primary;
+      text-shadow: 0px 3px 10px rgba($primary, 0.15);
+    }
   }
 }

@@ -207,6 +207,33 @@ a, button {
   }
 }
 
+.feedback {
+  width: 506px;
+  height: 509px;
+  padding: 21px 3.4vw 36px;
+  background: $dark url('../img/bg-modal.svg') no-repeat center;
+  background-size: cover;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    &-item {
+      margin-bottom: 46px;
+    }
+  }
+  &__title {
+    max-width: 300px;
+    margin: 0 auto 36px;
+    font-size: 20px;
+    font-family: 'Futura Demi';
+    line-height: 1.37;
+    text-align: center;
+  }
+  &__btn {
+    align-self: flex-end;
+    margin-top: 36px;
+  }
+}
+
 .form {
   &-item {
     position: relative;

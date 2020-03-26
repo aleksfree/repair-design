@@ -389,6 +389,75 @@ $(function() {
         }      
       });
 
+      $('#special-form').validate({
+        errorClass: 'invalid',
+        errorElement: 'div',
+        errorPlacement: function(error, element) {
+          error.prependTo(element.parent());
+        },      
+        rules: {
+          name: {
+            required: true,
+            minlength: 2,
+            maxlength: 15
+          },
+          phone: {
+            required: true,
+            minlength: 18
+          },
+          email: {
+            required: true,
+            email: true
+          },
+          policy: {
+            required: true
+          }
+        },
+        messages: {
+          name: {
+            required: 'Это обязательное поле',
+            minlength: 'Минимальная длина 2 символа',
+            maxlength: 'Максимальная длина 15 символов'
+          },
+          phone: {
+            required: 'Это обязательное поле',
+            minlength: 'Введите номер плностью'
+          },
+          email: {
+            required: 'Это обязательное поле',
+            email: 'Некорректный email'
+          },
+          policy: {
+            required: 'Дайте согласие на обработку данных'
+          }
+        },
+        submitHandler: function(form) {
+          $.ajax({
+            type: 'POST',
+            url: 'send.php',
+            data: $(form).serialize(),
+            beforeSend: function() {
+              $(form).find('.load').fadeIn();
+            },
+            success: function(res) {
+              $(form).find('.load').fadeOut();
+              if(res == 1) {
+                $('.modal-alert__text').html('Сообщение успешно отправлено').addClass('success');
+                ym(61333318,'reachGoal','submitForm');
+              }
+              else {
+                $('.modal-alert__text').html('Ошибка отправки сообщения').addClass('error');
+              }
+              modalClose('modal-wind');   
+            },
+            complete: function() {
+              $(form)[0].reset();
+              modalOpen('modal-alert');
+            }
+          });
+        }             
+      });
+
       /* Mask */
 
       $('.mask-tel').mask('+7 (000) 000-00-00', {placeholder: '+7 (___) ___-__-__'});

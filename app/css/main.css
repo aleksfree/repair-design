@@ -4018,6 +4018,43 @@ a:focus, button:focus {
   }
 }
 
+.feedback {
+  width: 506px;
+  height: 509px;
+  padding: 21px 3.4vw 36px;
+  background: #131313 url("../img/bg-modal.svg") no-repeat center;
+  background-size: cover;
+}
+
+.feedback__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.feedback__form-item {
+  margin-bottom: 46px;
+}
+
+.feedback__title {
+  max-width: 300px;
+  margin: 0 auto 36px;
+  font-size: 20px;
+  font-family: 'Futura Demi';
+  line-height: 1.37;
+  text-align: center;
+}
+
+.feedback__btn {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  margin-top: 36px;
+}
+
 .form-item {
   position: relative;
 }
@@ -4344,6 +4381,10 @@ input.invalid {
 
 .btn_modal {
   padding: 19px 47px 17px;
+}
+
+.btn_feedback {
+  padding: 19px 38px 17px;
 }
 
 .btn_flare {
@@ -5181,7 +5222,7 @@ input.invalid {
 
 /* Types */
 .types {
-  padding: 144px 0 124px;
+  padding: 144px 0 158px;
 }
 
 @media screen and (max-width: 575px) {
@@ -5209,28 +5250,118 @@ input.invalid {
 /* Special */
 .special {
   position: relative;
-  height: 645px;
+  padding: 100px 0 242px;
   background: url("../img/bg-special.png") no-repeat top left;
 }
 
-.line-2 {
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
+.special__wrapper {
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
-.line-3 {
-  -webkit-animation-delay: 1.5s;
-  animation-delay: 1.5s;
+.special__list {
+  position: absolute;
+  top: 50px;
+  left: -156px;
+  width: 636px;
+  height: 636px;
+  background: url("../img/rect.svg") no-repeat top right;
 }
 
-.line-4 {
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
+.special__list-item {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
 }
 
-.line-5 {
-  -webkit-animation-delay: 2.5s;
-  animation-delay: 2.5s;
+.special__list-item-1 {
+  top: 9.75%;
+  right: 19.34%;
+}
+
+.special__list-item-2 {
+  top: 27.2%;
+  right: 7.63%;
+}
+
+.special__list-item-3 {
+  top: 52.52%;
+  right: 3.3%;
+}
+
+.special__list-item-4 {
+  top: 77.67%;
+  right: 13.84%;
+}
+
+.special__list-number {
+  width: 42px;
+  height: 42px;
+  margin-right: 17px;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  font-family: 'Yeseva One', cursive;
+  border-radius: 50%;
+  background: #E3B873;
+  color: #FFFFFF;
+}
+
+.special__list-text {
+  max-width: 365px;
+  font-family: 'Futura Medium';
+  font-size: 18px;
+  color: #363636;
+}
+
+.special__money {
+  max-width: 415px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 38px 0 0 32px;
+}
+
+.special__money-icon {
+  width: 72px;
+  height: 72px;
+  margin-right: 25px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  background: #E3B873 url("../img/money.svg") no-repeat center;
+  -webkit-box-shadow: 0px 10px 20px rgba(227, 184, 115, 0.2);
+  box-shadow: 0px 10px 20px rgba(227, 184, 115, 0.2);
+  border-radius: 50%;
+}
+
+.special__money-text {
+  font-family: 'Futura Demi', sans-serif;
+  font-size: 20px;
+  color: #E3B873;
+  text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
 }
 
 /* Design */

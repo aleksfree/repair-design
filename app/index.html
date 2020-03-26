@@ -354,9 +354,73 @@
     <section id="special" class="special">
       <div class="container">
         <div class="special__wrapper">
-          <div class="special__left">
-                
+          <div class="special__list">
+            <div class="special__list-item special__list-item-1">
+              <div class="special__list-number">01</div>
+              <div class="special__list-text">
+                Наш специалист приедет для замеров в день контакта или 
+                назначит удобную для вас дату
+              </div>
+            </div>
+            <!-- /.special__list-item -->
+            <div class="special__list-item special__list-item-2">
+              <div class="special__list-number">02</div>
+              <div class="special__list-text">
+                Бесплатный замер
+              </div>
+            </div>
+            <!-- /.special__list-item -->
+            <div class="special__list-item special__list-item-3">
+              <div class="special__list-number">03</div>
+              <div class="special__list-text">
+                Бесплатная консультация
+              </div>
+            </div>
+            <!-- /.special__list-item -->
+            <div class="special__list-item special__list-item-4">
+              <div class="special__list-number">04</div>
+              <div class="special__list-text">
+                Получите смету расходов и сроки вашего будущего ремонта
+              </div>
+            </div>
+            <!-- /.special__list-item -->
           </div>
+          <!-- /.special__list -->
+          <div class="special__right">
+            <div class="feedback dark-section">
+              <h4 class="feedback__title">Оставьте заявку на бесплатный выезд замерщика</h4>
+              <form action="send.php" method="POST" id="special-form" class="form feedback__form">
+                <input type="hidden" name="form" value="Форма заявки на замеры">
+                <div class="form-item feedback__form-item">
+                  <label for="special-name" class="label label_light form__label">Имя</label>
+                  <input type="text" id="special-name" class="input input_light form__input" name="name" placeholder="Как вас зовут:">
+                </div>
+                <div class="form-item feedback__form-item">
+                  <label for="special-phone" class="label label_light form__label">Телефон</label>
+                  <input type="text" id="special-phone" class="input input_light form__input mask-tel" name="phone" placeholder="Ваш номер телефона:">
+                </div>
+                <div class="form-item feedback__form-item m-0">
+                  <label for="special-email" class="label label_light form__label">Email</label>
+                  <input type="text" id="special-email" class="input input_light form__input" name="email" placeholder="Ваш email">  
+                </div>
+                <div class="policy form__policy">
+                  <input type="checkbox" id="special-checkbox" name="policy" class="policy__checkbox" value="1">
+                  <label for="special-checkbox" class="policy__label">
+                    <span class="checkbox-icon"></span>
+                    Я соглашаюсь с обработкой данных
+                  </label>
+                </div>
+                <button type="submit" id="modal-submit" class="btn btn_flare btn_feedback feedback__btn"><span class="load"><img src="img/load.gif" alt=""></span>Вызвать замерщика</button>
+              </form>
+            </div>
+            <!-- /.feddback -->
+            <div class="special__money">
+              <div class="special__money-icon"></div>
+              <div class="special__money-text">Это поможет сэкономить 10 - 20% от стоимости материалов</div>
+            </div>
+            <!-- /.special__money -->
+          </div>
+          <!-- /.special__right -->
         </div>
       </div>
       <!-- /.container -->
