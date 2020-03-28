@@ -1,5 +1,7 @@
 .design {
+  padding-top: 154px;
   @include media('lg') {
+    padding-top: 0;
     padding-bottom: 100px;
   }
   @include media('sm') {

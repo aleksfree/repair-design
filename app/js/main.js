@@ -58,6 +58,7 @@ $(function() {
       $("a[href^='#']").click(function(e) {
         e.preventDefault();
         var _href = $(this).attr("href");
+        console.log(_href);
         $("html, body").animate({scrollTop: $(_href).offset().top+"px"}, (delay / 2));
       });
 
@@ -464,6 +465,10 @@ $(function() {
 
       /* Yandex Map */
 
+      setTimeout(function() {
+        $('body').append('<script src="https://api-maps.yandex.ru/2.1/?apikey=d8885b28-6dbd-4f4c-9449-d571f05834e6&lang=ru_RU&mode=release"></script>');
+      }, 1000);
+
       function init(){
           var myMap = new ymaps.Map('map', {
               center: [47.24472357536472,39.72318282705297],
@@ -486,10 +491,16 @@ $(function() {
 
       $(window).bind('scroll', function() {
         if($(this).scrollTop() > $('#team').offset().top) {
-          ymaps.ready(init);
           $(this).unbind('scroll');
+          ymaps.ready(init);
         }
       });
+
+      /* Yandex metrika */
+
+      setTimeout(function() {
+        $('body').append('<script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(61333318, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/61333318" style="position:absolute; left:-9999px;" alt="" /></div></noscript>');
+      }, 1000);
 
       /* Video player */
 
@@ -515,4 +526,36 @@ $(function() {
         return true;
       });
 
+      /* Slider in styles */
+
+      $('.styles__pagination-item').click(function() {
+        var slide = $(this).attr('id');
+        var buttons = $('.styles__pagination-item');
+        slide = slide.replace(/^slide-/, '');
+        toggleSlide(slide);
+
+        for(var i = 0; i < buttons.length; i++) {
+          if($(buttons[i]).hasClass('styles__pagination-item_active') && (i + 1) == slide) break;
+          if((i + 1) == slide) {
+            $($(buttons[i])).addClass('styles__pagination-item_active');
+          }
+          else {
+            $($(buttons[i])).removeClass('styles__pagination-item_active');
+          }
+        }
+      });
+      
+      function toggleSlide(slide) {
+        var slides = $('.styles-slider__item');
+      
+        for(var i = 0; i < slides.length; i++) {
+          if($(slides[i]).hasClass('styles-slider__item_active') && (i + 1) == slide) break;
+          if((i + 1) == slide) {
+            $(slides[i]).addClass('styles-slider__item_active');
+          }
+          else {
+            $(slides[i]).removeClass('styles-slider__item_active');
+          }
+        }
+      }
 });

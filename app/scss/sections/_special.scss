@@ -108,6 +108,8 @@
     }
   }
   &__feedback {
-    width: 420px;
+    @include media('xl') {
+      width: 420px;
+    }
   }
 }
