@@ -558,4 +558,13 @@ $(function() {
           }
         }
       }
+
+      var stylesSwipe = new Swiper('.styles__slider-mobile', {
+        loop: true,
+        effect: 'fade',
+        navigation: {
+          nextEl: '.styles__mobile-arrow_next',
+          prevEl: '.styles__mobile-arrow_prev',
+        },
+      });
 });

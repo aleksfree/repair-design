@@ -1,7 +1,7 @@
 .types {
   padding: 144px 0 158px;
   @include media('sm') {
-    padding: 83px 0 208px;
+    padding: 83px 0 72px;
   }
   &__card {
     @include media('md') {

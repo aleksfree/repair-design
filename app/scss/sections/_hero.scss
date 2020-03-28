@@ -12,7 +12,7 @@
   }
   @include media('sm') {
     display: block;
-    min-height: 535px;
+    height: 535px;
   }
   @media (max-height: 499px) {
     height: auto;

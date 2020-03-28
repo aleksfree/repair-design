@@ -1,11 +1,11 @@
 .design {
   padding-top: 154px;
   @include media('lg') {
-    padding-top: 0;
+    padding-top: 35;
     padding-bottom: 100px;
   }
   @include media('sm') {
-    padding-top: 257px;
+    padding-top: 173px;
     padding-bottom: 15px;
   }
   &-card {
