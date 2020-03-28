@@ -1,6 +1,7 @@
 .team {
   position: relative;
   padding: 0 0 97px;
+  background: url('../img/bg-main.svg') no-repeat center / cover;
   @include media('lg') {
     background: $dark;
     padding-top: 50px;
@@ -21,11 +22,12 @@
       flex-direction: column;
       align-items: center;
     }
-    @include media('sm') {
-      align-items: center;
+    @media screen and(max-width: 359px) {
+      padding: 0 15px;
     }
     &__img {
       @include media('sm') {
+        align-items: center;
         height: 361px;
       }
       img {
@@ -63,7 +65,8 @@
       }
       @include media('sm') {
         margin-right: -35px;
-        width: 303px;
+        width: 100%;
+        max-width: 303px;
       }
     }
     &__text {

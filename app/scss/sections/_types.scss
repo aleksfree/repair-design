@@ -1,5 +1,6 @@
 .types {
   padding: 144px 0 158px;
+  background: url('../img/bg-main.svg') no-repeat center / cover;
   @include media('sm') {
     padding: 83px 0 72px;
   }

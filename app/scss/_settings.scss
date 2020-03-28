@@ -259,6 +259,7 @@ a, button {
   border: none;
   font-family: 'Futura Medium';
   font-size: 18px;
+  outline: none;
   border-bottom: 1px solid rgba($grey, 0.3);
   @include input-placeholder {
     opacity: 1;

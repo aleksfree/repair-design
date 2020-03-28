@@ -4,7 +4,7 @@ $(function() {
       overlay = $('.overlay'),
       modalBtn = $('[data-toggle=modal]'),
       closeBtn = $('.modal-close'),
-      top_show = 0,
+      top_show = 700,
       delay = 1000;
       /* Modal window */
 
@@ -461,7 +461,9 @@ $(function() {
 
       /* Mask */
 
-      $('.mask-tel').mask('+7 (000) 000-00-00', {placeholder: '+7 (___) ___-__-__'});
+      $('.mask-tel').focus(function() {
+        $(this).mask('+7 (000) 000-00-00', {placeholder: '+7 (___) ___-__-__'});
+      });
 
       /* Yandex Map */
 
@@ -489,9 +491,9 @@ $(function() {
           myMap.behaviors.disable('scrollZoom');
       }
 
-      $(window).bind('scroll', function() {
+      $(window).bind('scroll.ymap', function() {
         if($(this).scrollTop() > $('#team').offset().top) {
-          $(this).unbind('scroll');
+          $(this).unbind('scroll.ymap');
           ymaps.ready(init);
         }
       });

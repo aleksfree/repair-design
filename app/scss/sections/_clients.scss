@@ -1,6 +1,6 @@
 .clients {
   padding-bottom: 382px;
-  background: url('../img/bg-clients.svg') repeat-x bottom left;
+  background: url('../img/bg-main.svg') no-repeat center / cover, url('../img/bg-clients.svg') repeat-x bottom left;
   @include media('xl') {
     padding-top: 50px;
   }

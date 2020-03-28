@@ -1,7 +1,7 @@
 .special {
   position: relative;
   padding: 100px 0 242px;
-  background: url('../img/bg-special.png') no-repeat top left;
+  background: url('../img/bg-main.svg') no-repeat center / cover, url('../img/bg-special.png') no-repeat top left;
   @include media('xl') {
     padding: 50px 0 150px;
     background-position: top -30px left 0;

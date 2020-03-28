@@ -1,6 +1,7 @@
 .control {
   position: relative;
   padding: 0;
+  background: url('../img/bg-main.svg') no-repeat top 320px center / cover;
   @include media('md') {
     padding-top: 50px;
     background: $dark;
